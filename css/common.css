@@ -153,7 +153,7 @@ div::-webkit-scrollbar-thumb {
   background-color: #c2c2c4
 }
 
-#wrapCont {max-width:800px;min-width:280px;margin:0 auto}
+#wrapCont {max-width:800px;min-width:280px;margin:0 auto;font-size: 13px;}
 
 .wrap_profile {
   position: relative;
