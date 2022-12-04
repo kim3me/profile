@@ -1,0 +1,776 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>기말대비족집게특강</title>
+
+	<link rel="stylesheet" type="text/css" href="https://www.etoos.com/common/css/etoos.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+
+			<style>
+			body {overflow:hidden}
+			#wrapHeader {position:relative;text-align:center;z-index:30;background:#fff}
+			#wrapFooter {text-align:center}
+			.g_ev_cont {position:relative;background:#000}
+			.g_ev_cont .ev_cont {position:absolute;top:0;left:0;overflow:hidden;min-height:711px;min-width:1200px}
+			.g_ev_cont .ev_cont .full_img {position:absolute;min-height:611px;min-width:1200px}
+			.g_ev_cont .ev_cont .cont {position:absolute;top:50%;left:50%;width:1000px;height:500px;margin:0 0 0 -500px;z-index:1;opacity:0;filter:alpha(opacity=0)}
+			.g_ev_cont .ev_cont .cont_img {position:absolute;top:50%;left:50%;}
+
+			.g_ev_cont .wr_mov {z-index:20;min-height:675px;min-width:1200px}
+			.g_ev_cont .wr_mov .full_mov {position:absolute;top:50%;left:50%;min-height:675px;min-width:1200px}
+			.wheel1 .in1 .bg {position:absolute;top:0;left:50%;bottom:0;width:840px;margin-left:-420px;background:url('1102_teaser/bg2_1_2.gif') 0 0 #7033ba;box-shadow:0 0 100px 0 rgba(0, 0, 0, 0.8);}
+			.wheel2 .ev_cont {background:url('1102_teaser/bg3.jpg') 0 0;}
+			.nav_scroll {position:fixed;top:0;right:-120px;bottom:0;width:170px;z-index:10;transition:all .5s}
+			.nav_scroll:hover {right:0}
+			.nav_scroll .bg1 {position:absolute;top:0;right:0;bottom:0;width:170px;background:#000;opacity:0.2;filter:alpha(opacity=20)}
+			.nav_scroll .bg2 {position:absolute;top:0;right:0;bottom:0;width:120px;background:#000}
+			.nav_scroll .list_nav {position:absolute;top:50%;right:0;margin-top:-180px}
+			.nav_scroll .list_nav .nav {position:relative;display:block;width:100%;}
+			.nav_scroll .list_nav .bar {position:absolute;top:0;left:50px;right:0;bottom:0;background:#000;z-index:-1;transition:all .3s}
+			.nav_scroll .list_nav li:hover .bar {left:0}
+			.nav_scroll .list_nav .on .bar {left:0}
+			.btn_dot {position:absolute;z-index:5;left:50%;bottom:70px;width:200px;text-align:center;margin-left:-100px}
+			.btn_dot .dot {display:inline-block;text-indent:-9999px;width:12px;height:12px;background:#000;overflow:hidden;border-radius:7px;margin:0 12px;opacity:0.2;filter:alpha(opacity=20)}
+			.btn_dot .on {display:inline-block;opacity:1;filter:alpha(opacity=100)}
+			.wr_bnr {position:absolute;top:0;left:0;right:0;z-index:1;background:#fff000;border-top:1px solid #642aab;border-bottom:1px solid #642aab;text-align:center}
+			.wr_bnr .bnr {position:relative;z-index:1}
+			.wr_bnr .bg_r {position:absolute;height:120px;top:0;left:50%;right:0;background:#7033bb}
+			.list_cm {overflow:hidden;position:absolute;top:512px;left:50%;margin-left:-456px;width:420px;height:28px;line-height:28px;color:#fff}
+			.list_cm .name {padding-right:21px}
+			</style>
+
+	</head>
+
+	<body>
+
+
+		<div id="wrapHeader">
+			<div class="inner_header">
+				<a href="#"><img src="1102_teaser/logo.png" alt="ETOOS ME" class="logo"></a>
+				<div class="wr_btn">
+					<a href="#" class="btn">회원가입</a>
+					<a href="#" class="btn">로그인</a>
+				</div>
+			</div>
+		</div>
+	<div id="wrapEvent" style="position:relative;width:100%;overflow:hidden;background:url('1102_teaser/bg.gif') 0 0;text-align:center">
+
+		<div class="nav_scroll">
+			<span class="bg1"></span>
+			<span class="bg2"></span>
+			<ul class="list_nav" id="scrollNav">
+				<li><a href="#scroll0" class="nav" onclick="javascript:wheelIdx(0);"><img src="1102_teaser/nav1.png" alt="1 ETOOSme"><span class="bar"></span></a></li>
+				<li><a href="#scroll1" class="nav" onclick="javascript:wheelIdx(1);"><img src="1102_teaser/nav2.png" alt="2 무료이용 신청"><span class="bar"></span></a></li>
+				<li><a href="#scroll2" class="nav" onclick="javascript:wheelIdx(2);"><img src="1102_teaser/nav3.png" alt="3 신규가입 이벤트"><span class="bar"></span></a></li>
+				<li><a href="#scroll3" class="nav" onclick="javascript:wheelIdx(3);"><img src="1102_teaser/nav4.png" alt="4 선생님 이벤트"><span class="bar"></span></a></li>
+				<li><a href="#scroll4" class="nav" onclick="javascript:wheelIdx(4);"><img src="1102_teaser/nav5.png" alt="5 기말 무료특강"><span class="bar"></span></a></li>
+				<li><a href="#scroll5" class="nav" onclick="javascript:wheelIdx(5);"><img src="1102_teaser/nav6.png" alt="6 Coming Soon"><span class="bar"></span></a></li>
+			</ul>
+
+		</div>
+
+		<div class="g_ev_cont wheel0 g_in" id="scroll0">
+			
+			<div class="ev_cont in1" style="display:none">
+				<img src="1102_teaser/bg1_1.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont1_1.png" class="cont_img" style="margin:-350px 0 0 -550px">
+				</div>
+			</div>
+			<div class="ev_cont in2" style="display:none">
+				<img src="1102_teaser/bg1_1.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont1_2.png" class="cont_img" style="margin:-350px 0 0 -550px">
+				</div>
+			</div>
+			<div class="ev_cont in3" style="display:none">
+				<img src="1102_teaser/bg1_1.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont1_3.png" class="cont_img" style="margin:-350px 0 0 -550px">
+				</div>
+			</div>
+			<div class="ev_cont in4"style="display:none">
+				<img src="1102_teaser/bg1_2.jpg" class="full_img" >
+				<div class="cont">
+					<img src="1102_teaser/cont1_4.png" class="cont_img" style="margin:-265px 0 0 -270px">
+				</div>
+			</div>
+			<div class="btn_dot">
+				<a href="javascript:;" class="dot">1</a>
+				<a href="javascript:;" class="dot">2</a>
+				<a href="javascript:;" class="dot">3</a>
+				<a href="javascript:;" class="dot">4</a>
+			</div>
+		</div>
+
+
+		<div class="g_ev_cont wheel1 g_in" id="scroll1">
+			<div class="ev_cont in1" style="z-index:2">
+				<img src="1102_teaser/bg2_1.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont2_1.png" class="cont_img" style="margin:-480px 0 0 -540px" usemap="#cont2_1Map">
+					<map name="cont2_1Map" id="cont2_1Map">
+						<area shape="rect" coords="656,474,829,643" href="#none" alt="무료이용 사전신청" />
+					</map>
+					<div style="position:absolute;top: 439px;left: 152px;">
+						<img src="1102_teaser/num1.png" alt="1" style="margin-right: 36px;">
+						<img src="1102_teaser/num1.png" alt="1" style="margin-right: 3px;">
+						<img src="1102_teaser/num1.png" alt="1" style="margin-right:3px;">
+						<img src="1102_teaser/num1.png" alt="1">
+					</div>
+					<img src="1102_teaser/cont2_1_ani.gif" style="position:absolute;top: 152px;left:50%;margin-left: 335px;z-index:1">
+					<div style="position:absolute;top: 50%;left:50%;margin: -341px 0 0 -347px;z-index:1">
+						<img src="1102_teaser/cont2_f2.png">
+						<img src="1102_teaser/cont2_f2_ani1.gif" alt="2차 사전신청 1,128명에게 추가혜택 제공!" style="position:absolute;top: 0;left: 50px;">
+					</div>
+					<!--<div style="position:absolute;top: 50%;left:50%;margin: -374px 0 0 -347px;z-index:1">
+						<img src="1102_teaser/cont2_f3_ani1.gif" alt="3차 특별연장!" >
+					</div>-->
+					<div style="position:absolute;top: 50%;left:50%;margin: -290px 0 0 260px;z-index:1">
+						<img src="1102_teaser/cont2_f1.png">
+						<img src="1102_teaser/cont2_f1_ani1.gif" alt="곧마감" style="position:absolute;top: 33px;left: 32px;">
+						<!--<img src="1102_teaser/cont2_f1_ani2.gif" alt="마감" style="position:absolute;top: 33px;left: 32px;">-->
+					</div>
+
+				</div>
+				<a href=""><img src="1102_teaser/cont2_1_btn.png" alt="신청현황보기" style="position:absolute;bottom:25px;left:50%;margin-left:270px;z-index:1"></a>
+				<span class="bg"></span>
+			</div>
+			<div class="ev_cont in2" style="display:none">
+				<img src="1102_teaser/bg2_2.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont2_2.png" class="cont_img" style="margin:-280px 0 0 -530px" usemap="#cont2_2Map">
+					<map name="cont2_2Map" id="cont2_2Map">
+						<area shape="rect" coords="301,483,767,565" href="#none" alt="무료이용 사전 신청하기" />
+					</map>
+					<input type="checkbox" name="radio1" style="position:absolute;top: 411px;left: 734px;height:13px;width:13px">
+				</div>
+			</div>
+			<div class="ev_cont in3" style="display:none">
+				<img src="1102_teaser/bg2_2.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont2_3.png" class="cont_img" style="margin:-320px 0 0 -436px">
+				</div>
+			</div>
+			<div class="ev_cont in4" style="display:none">
+				<img src="1102_teaser/bg2_2.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont2_4.png" class="cont_img" style="margin:-310px 0 0 -470px" usemap="#cont2_4Map">
+					<a href=""><img src="1102_teaser/cont2_4_btn.png" alt="신청 현황 다운로드" style="position:absolute;top: 321px;left:50%;margin-left: 280px;z-index:1"></a>
+				</div>
+			</div>
+
+			<div class="wr_bnr">
+				<img src="1102_teaser/bnr.png" usemap="#bnrMap" class="bnr">
+				<map name="bnrMap" id="bnrMap">
+					<area shape="rect" coords="907,35,1069,90" href="#none" alt="사전 신청하기" />
+				</map>
+				<span class="bg_r"></span>
+				<img src="1102_teaser/cont2_2_ani.gif" style="position:absolute;top: 0px;left: 50%;z-index:1;margin-left: -540px;">
+				<div style="position:absolute;top: 38px;left: 50%;z-index:1;margin-left: -9px;">
+					<img src="1102_teaser/num1.png" alt="1" height="51" style="margin-right: 11px;">
+					<img src="1102_teaser/num1.png" alt="1" height="51" style="margin-right: 1px;">
+					<img src="1102_teaser/num1.png" alt="1" height="51" style="margin-right: 1px;">
+					<img src="1102_teaser/num1.png" alt="1" height="51">
+				</div>
+			</div>
+
+			<div class="btn_dot">
+				<a href="javascript:;" class="dot">1</a>
+				<a href="javascript:;" class="dot">2</a>
+				<a href="javascript:;" class="dot">3</a>
+				<a href="javascript:;" class="dot">4</a>
+			</div>
+		</div>
+
+
+		<div class="g_ev_cont wheel2" id="scroll2">
+			<div class="ev_cont">
+				<div class="cont">
+					<img src="1102_teaser/cont3.png" class="cont_img" style="margin:-360px 0 0 -465px" usemap="#cont3Map">
+					<map name="cont3Map" id="cont3Map">
+						<area shape="rect" coords="444,522,754,604" href="#none" alt="나도 왕뚜껑 받기" />
+						<area shape="rect" coords="773,561,933,599" href="#none" alt="이벤트 참여 안내 보기" />
+						<area shape="rect" coords="793,658,933,696" href="#none" alt="신청 현황 다운로드" />
+					</map>
+					<a href=""><img src="1102_teaser/cont3_btn.png" alt="신청 현황 다운로드" style="position:absolute;top: 548px;left:50%;margin-left: 328px;z-index:1"></a>
+					<div style="position:absolute;top: 538px;left: 50%;z-index:1;margin-left: -259px;">
+						<img src="1102_teaser/numy1.png" alt="1" height="59" style="margin-right: 0px;">
+						<img src="1102_teaser/numy1.png" alt="1" height="59" style="margin-right: 16px;">
+						<img src="1102_teaser/numy1.png" alt="1" height="59" style="margin-right: 1px;">
+						<img src="1102_teaser/numy1.png" alt="1" height="59" style="margin-right: 1px;">
+						<img src="1102_teaser/numy1.png" alt="1" height="59">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="g_ev_cont wheel3" id="scroll3">
+			<div class="ev_cont">
+				<img src="1102_teaser/bg4.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont4.png" class="cont_img" style="margin:-360px 0 0 -481px" usemap="#cont4Map">
+					<map name="cont4Map" id="cont4Map">
+						<area shape="rect" coords="540,321,1010,600" href="#none" alt="AHJ 선생님" />
+						<area shape="rect" coords="-1,318,433,598" href="#none" alt="강현정 선생님" />
+					</map>
+
+					<ul class="list_cm">
+						<li><strong class="name">한*주</strong> 이투스me에서 선생님을 뵙게 되어 기뻐요…..</li>
+					</ul>
+					<ul class="list_cm" style="margin-left: 87px;">
+						<li><strong class="name">한*주</strong> 이투스me에서 선생님을 뵙게 되어 기뻐요…..</li>
+					</ul>
+				</div>
+				<img src="1102_teaser/cont4_txt1.png" style="position:absolute;bottom:25px;left:50%;margin-left:-700px;z-index:1">
+				<!--2015-11-02--><img src="1102_teaser/cont4_txt2.png" style="position:absolute;bottom:25px;left:50%;margin-left:570px;z-index:1" usemap="#cont4_txt2">
+				<map name="cont4_txt2" id="cont4_txt2">
+					<area shape="rect" coords="212,8,268,27" href="http://biz.heraldcorp.com/view.php?ud=20151102000822"  target="_blank"/>
+				</map><!--//2015-11-02-->
+				<a href="javascript:;" onclick="document.getElementById('layMsg').style.display='block';"/><img src="1102_teaser/cont4_msg.png" style="position:absolute;bottom: 205px;left:50%;margin-left: 600px;z-index:1"></a>
+				<div id="layMsg" style="position:absolute;top:50%;left: 50%;z-index:30;margin:-250px 0 0 -448px;">
+					<img src="1102_teaser/msg.png" usemap="#msgMap">
+					<map name="msgMap" id="msgMap">
+						<area shape="circle" coords="889,25,28" href="javascript:;" alt="닫기" onclick="document.getElementById('layMsg').style.display='none';"/>
+					</map>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="g_ev_cont wheel4 g_in" id="scroll4">
+
+			<div class="ev_cont in1" style="display:none">
+				<img src="1102_teaser/bg5.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont5.png" class="cont_img" style="margin:-430px 0 0 -447px" usemap="#cont5Map">
+					<map name="cont5Map" id="cont5Map">
+						<area shape="poly" coords="640,446,763,623,889,446" href="#none" alt="무료공개 특강보기" />
+					</map>
+				</div>
+			</div>
+		</div> 
+
+
+		<div class="g_ev_cont wheel5" id="scroll5">
+			<div class="ev_cont">
+				<img src="1102_teaser/bg6.jpg" class="full_img">
+				<div class="cont">
+					<img src="1102_teaser/cont6.png" class="cont_img" style="margin:-230px 0 0 -500px" usemap="#footerMap">
+					<map name="footerMap" id="footerMap">
+						<area shape="rect" coords="119,387,177,408" href="http://recruit.etoos.com/" target="_blank" alt="회사소개" />
+						<area shape="rect" coords="183,387,241,409" href="#none" alt="강사모집" />
+						<area shape="rect" coords="245,387,301,409" href="http://recruit.etoos.com/recruit/listRecruitApply.do" alt="인재채용" />
+						<area shape="rect" coords="306,387,364,409" href="#none" alt="이용약관" />
+						<area shape="rect" coords="368,387,471,409" href="#none" alt="개인정보취급방침" />
+						<area shape="rect" coords="254,471,368,487" href="mailto:security@etoos.com" alt="security@etoos.com" />
+						<area shape="rect" coords="324,496,427,515" href="mailto:etoosme@etoos.com" alt="etoosme@etoos.com" />
+					</map>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type='text/javascript' src='https://www.etoos.com/common/js/jquery/jquery.scrollTo-1.4.3.1.js'></script>
+	<script type='text/javascript' src='https://www.etoos.com/common/js/jquery/jquery.easing.1.3.js'></script>
+	<script type='text/javascript' src='https://www.etoos.com/common/js/jquery/jquery.autosize.js'></script>
+	<script type="text/javascript" src="https://www.etoos.com/common/js/jquery/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript">
+		var swf_src = new Array(3);
+		swf_src[0] = '<video class="full_mov" controls="controls" preload="preload" loop="loop" autoplay="autoplay"><source src="http://stoppain.org.ua/bundles/stoppainfrontend/video/stoppain_en.mp4" type="video/mp4"></source><source src="http://stoppain.org.ua/bundles/stoppainfrontend/video/stoppain_en.webm" type="video/webm"></source><source src="http://stoppain.org.ua/bundles/stoppainfrontend/video/stoppain_en.ogv" type="video/ogg"></source></video>';
+		swf_src[4] = '<video class="full_mov" controls="controls" preload="preload" loop="loop" autoplay="autoplay"><source src="http://stoppain.org.ua/bundles/stoppainfrontend/video/stoppain_en.mp4" type="video/mp4"></source><source src="http://stoppain.org.ua/bundles/stoppainfrontend/video/stoppain_en.webm" type="video/webm"></source><source src="http://stoppain.org.ua/bundles/stoppainfrontend/video/stoppain_en.ogv" type="video/ogg"></source></video>';
+		swf_src[2] = '22';
+			
+
+
+		var J$ = jQuery.noConflict();
+		var isMENU_CLICK = false;
+
+		// 배경이미지 리사이징
+		resizingWindow();
+		J$(document).ready(function() {
+			resizingWindow();
+			window.onorientationchange = function() {
+				resizingWindow();
+			}
+		});
+
+		J$(window).resize(function() {
+			if (J$(window).width() <= screen.availWidth) {
+				resizingWindow();
+			};
+			resizingWindow();
+			J$(window).scrollTo(J$(".wheel" + wheel_idx).offset().top, {
+				duration: 50,
+				easing: "easeInOutQuart",
+				axis: 'y',
+				onAfter: function() {
+				}
+			});
+		});
+
+		function resizingWindow() {
+			var h;
+			var w;
+
+			if (self.innerWidth) {
+				// IE 외 모든 브라우저
+				w = self.innerWidth;
+			} else if (document.documentElement && document.documentElement.clientWidth) {
+				// IE 6 Strict
+				w = document.documentElement.clientWidth;
+			} else if (document.body) {
+				// IE
+				w = document.body.clientWidth;
+			};
+			if (self.innerHeight) {
+				// IE 외 모든 브라우저
+				h = self.innerHeight;
+			} else if (document.documentElement && document.documentElement.clientHeight) {
+				// IE 6 Strict
+				h = document.documentElement.clientHeight;
+			} else if (document.body) {
+				// IE
+				h = document.body.clientHeight;
+			};
+
+
+			var wr = J$(".g_ev_cont");
+			var wr_h = h;
+			var wr_w = w;
+			var wrimg = J$(".ev_cont");
+			var img = J$(".ev_cont .full_img");
+			var img_r = 1.963;
+			var img_h = img.innerHeight();
+			var img_w = img.innerWidth();
+			var mov = J$(".ev_cont .full_mov");
+			var mov_r = 1.777;
+			var mov_h = mov.innerHeight();
+			var mov_w = mov.innerWidth();
+
+			wr.css({
+				"width": wr_w,
+				"height": wr_h
+			});
+			wrimg.css({
+				"width": wr_w,
+				"height": wr_h
+			});
+			img_h = img.innerHeight();
+			img_w = img.innerWidth();
+			img.css({
+				"width": wr_w,
+				"height": wr_h,
+				"top": '50%',
+				"left": '50%'
+			});
+
+			if (w >= h * img_r) {
+				img.css({
+					"width": wr_w,
+					"height": 'auto',
+					"margin-top": '-' + ((img_w / img_r) / 2) + 'px',
+					"margin-left": '-' + (img_w / 2) + 'px'
+				});
+			}
+			if (h * img_r >= w) {
+				img.css({
+					"height": wr_h,
+					"width": 'auto',
+					"margin-top": '-' + (img_h / 2) + 'px',
+					"margin-left": '-' + ((img_h * img_r) / 2) + 'px'
+				});
+			}
+
+			mov_h = wr_h;
+			mov_w = wr_w;
+			mov.css({
+				"width": wr_w,
+				"height": wr_h,
+				"top": '50%',
+				"left": '50%'
+			});
+
+			if (w >= h * mov_r) {
+				mov.css({
+					"width": wr_w,
+					"height": 'auto',
+					"margin-top": '-' + ((mov_w / mov_r) / 2) + 'px',
+					"margin-left": '-' + (mov_w / 2) + 'px'
+				});
+			}
+			if (h * mov_r >= w) {
+				mov.css({
+					"height": wr_h,
+					"width": 'auto',
+					"margin-top": '-' + (mov_h / 2) + 'px',
+					"margin-left": '-' + ((mov_h * mov_r) / 2) + 'px'
+				});
+			}
+		}
+
+
+		J$(document).ready(function() {
+			var idx = 0;
+
+			whIdxMin(0);
+			// 이벤트페이지 이동
+			J$(window).scrollTo(J$("#wrapEvent").offset().top, {
+				duration: 700,
+				easing: "easeInOutQuart",
+				axis: 'y',
+				onAfter: function() {}
+			});
+
+
+			//타겟링크 스크롤링
+			J$('a[href^="#"]').bind('click.smoothscroll', function(e) {
+				isMENU_CLICK = true;
+				e.preventDefault();
+				var target = this.hash,
+					$target = J$(target);
+				J$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 900, 'swing', function() {
+					window.location.hash = target;
+					fnMENU_ON(target.replace('#scroll', ''));
+				});
+				setTimeout("isMENU_CLICK = false;", 1111);
+			});
+		});
+
+		
+		
+		//오늘 하루 보지 않기
+		J$(".btn_mov_close").click(function() {
+			J$(this).parent('.wr_mov').remove();
+			whIdxMin(wheel_idx);
+		});
+		
+		//닫기
+		J$(".btn_mov_close2").click(function() {
+			J$(this).parent('.wr_mov').remove();
+			whIdxMin(wheel_idx);
+		});
+
+
+
+
+		J$(function() {
+			J$(window).scroll(function() {
+				var position = J$(window).scrollTop();
+
+				if (!isMENU_CLICK) {
+					if (position < J$(".wheel1").offset().top - 400) {
+						fnMENU_ON('0');
+					} else if (position > J$(".wheel1").offset().top - 400 && position < J$(".wheel2").offset().top - 400) {
+						fnMENU_ON('1');
+					} else if (position > J$(".wheel2").offset().top - 400 && position < J$(".wheel3").offset().top - 400) {
+						fnMENU_ON('2');
+					} else if (position > J$(".wheel3").offset().top - 400 && position < J$(".wheel4").offset().top - 400) {
+						fnMENU_ON('3');
+					} else if (position > J$(".wheel4").offset().top - 400 && position < J$(".wheel5").offset().top - 400) {
+						fnMENU_ON('4');
+					} else if (position > J$(".wheel5").offset().top - 400 ) {
+						fnMENU_ON('5');
+					}
+				};
+			});
+		});
+
+
+
+		function fnMENU_ON(menu) {
+			J$('#scrollNav').find("li").eq(menu).siblings().removeClass('on');
+			J$('#scrollNav').find("li").eq(menu).addClass('on')
+		}
+
+		function wheelIdx(scroll) {
+			wheel_idx = scroll;
+			whIdxMin(scroll)
+		}
+
+
+
+
+		//휠 다운 초기화 + 클릭이동
+		function whIdxMin(i) {
+			wh_idx = 0;
+			whIdxFormat(i, wh_idx);
+			if (J$('.wheel' + i).find('.ev_cont').hasClass('wr_mov')) {
+				J$(".wheel" + i).find('.wr_video').html(swf_src[i]);
+				resizingWindow();
+			}
+		}
+
+		//휠 업 초기화 
+		function whIdxMax(i) {
+			wh_idx = J$(".wheel" + i).children('.ev_cont').length - 1;
+			whIdxFormat(i, wh_idx);
+		}
+
+		function whIdxFormat(i, w) {
+			J$(".wheel" + i).children('.ev_cont').eq(w).siblings('.ev_cont').fadeOut();
+			J$(".wheel" + i).children('.ev_cont').eq(w).fadeIn();
+			J$(".wheel" + i).siblings().find('.ev_cont .cont').animate({ opacity: "0", marginTop : "-500px" }, 700 , function() {
+				J$(".wheel" + i).siblings().find('.ev_cont .cont').css({"margin-top": 0, "opacity": 0});
+			});
+			J$(".wheel" + i).find('.ev_cont').eq(w).children('.cont').animate({ opacity: "1", marginTop : "-250px" }, 700 );
+			if (J$('.wheel' + i).find('.ev_cont').hasClass('wr_mov')) {
+				J$(".wheel" + i).find(".btn_dot a").eq(w).siblings('.on').removeClass('on');
+				J$(".wheel" + i).find(".btn_dot a").eq(w).addClass('on')
+			} else {
+				J$(".wheel" + i).find(".btn_dot a").eq(w).siblings().removeClass('on');
+				J$(".wheel" + i).find(".btn_dot a").eq(w).addClass('on')
+			}
+
+		}
+
+		function whIdxPaging(t, w) {
+			J$(t).children('.ev_cont').eq(w).siblings('.ev_cont').fadeOut();
+			J$(t).children('.ev_cont').eq(w).fadeIn();
+			
+			if (J$(t).find('.ev_cont').hasClass('wr_mov')) {
+				J$(t).find(".btn_dot a").eq(w - 1).siblings('.on').removeClass('on');
+				J$(t).find(".btn_dot a").eq(w - 1).addClass('on')
+			} else {
+				J$(t).find(".btn_dot a").eq(w).siblings('.on').removeClass('on');
+				J$(t).find(".btn_dot a").eq(w).addClass('on')
+			}
+			J$(t).children('.ev_cont').eq(w).siblings('.ev_cont').children('.cont').animate({ opacity: "0", marginTop : "-500px" }, 700 , function() {
+				J$(t).children('.ev_cont').eq(w).siblings('.ev_cont').children('.cont').css({"margin-top": 0, "opacity": 0});
+			});
+			J$(t).children('.ev_cont').eq(w).children('.cont').animate({ opacity: "1", marginTop : "-250px" }, 700 );
+
+		}
+
+		function whIdxScrolling(i) {
+			J$(window).scrollTo(J$(".wheel" + wheel_idx).offset().top, {
+				duration: 700,
+				easing: "easeInOutQuart",
+				axis: 'y',
+				onAfter: function() {
+				}
+			});
+		}
+		
+		
+		J$(".btn_dot .dot").click(function() {
+			s = J$(".wheel" + wheel_idx)
+			if (J$(s).find('.ev_cont').hasClass('wr_mov')) {
+				p = J$(this).parent().children('a').index(this)+1;
+			} else {
+				p = J$(this).parent().children('a').index(this);
+			}
+			wh_idx = p
+			whIdxPaging(s, p);
+		});
+
+
+
+
+
+
+
+		//마우스 휠 스크롤링
+		var wheel_leg = J$('#wrapEvent .g_ev_cont').length;
+		var wheel_idx = 0;
+		var wh_idx = 0;
+		var is_anim = false;
+		var is_anim_sub = false;
+		J$('#wrapEvent').mousewheel(function(event, delta, deltaX, deltaY) {
+			if (!is_anim && !is_anim_sub) {
+
+				is_anim = true;
+				setTimeout(function() {
+					is_anim = false
+				}, 700);
+				if (deltaY == -1) { //휠 다운
+					wheel_idx = wheel_idx + 1;
+					if (wheel_idx >= wheel_leg) { // max
+						wheel_idx = wheel_leg;
+						J$(window).scrollTo(J$("#wrapFooter").offset().top, {
+							duration: 700,
+							easing: "easeInOutQuart",
+							axis: 'y',
+							onAfter: function() {}
+						});
+					} else if (wheel_idx <= 0) { // min
+						wheel_idx = 0;
+					} else {
+						whIdxScrolling(wheel_idx);
+						whIdxMin(wheel_idx);
+					}
+
+				} else { //휠 업
+					if (wheel_idx <= 1) {
+						wheel_idx = 0;
+					} else {
+						wheel_idx = wheel_idx - 1;
+						whIdxScrolling(wheel_idx);
+						whIdxMax(wheel_idx);
+					}
+				}
+				is_anim = true;
+				setTimeout(function() {
+					is_anim = false
+				}, 700);
+			}
+			event.stopPropagation();
+			event.preventDefault();
+		});
+
+
+		//마우스 휠 페이징
+		J$('.g_in').mousewheel(function(event, delta, deltaX, deltaY) {
+			if (!is_anim && !is_anim_sub) {
+				var position = J$(window).scrollTop();
+				var ev_leg = J$(this).children('.ev_cont').length;
+				if (deltaY == -1) { // 휠 다운
+					if (position < J$("#wrapEvent").offset().top) {
+						J$(window).scrollTo(J$("#wrapEvent").offset().top, {
+							duration: 700,
+							easing: "easeInOutQuart",
+							axis: 'y',
+							onAfter: function() {}
+						});
+						wheel_idx = 0;
+					} else {
+						wh_idx = wh_idx + 1;
+						if (wh_idx >= ev_leg) {
+							wh_idx = ev_leg;
+							wheel_idx = wheel_idx + 1;
+							if (wheel_idx >= wheel_leg) {
+								wheel_idx = wheel_leg;
+							} else {
+								wh_idx = 0;
+								whIdxScrolling(wheel_idx);
+								whIdxMin(wheel_idx);
+								whIdxPaging(this, wh_idx)
+							}
+						} else if (wh_idx <= 0) {
+							wh_idx = 0;
+						} else {
+							whIdxPaging(this, wh_idx)
+							if (J$('.wheel' + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+								J$(".wheel" + wheel_idx).find('.wr_video').html('');
+							}
+						}
+					}
+				} else { //휠 업
+					if (wh_idx <= 0) {
+						if (position == J$("#wrapEvent").offset().top) {
+							J$(window).scrollTo(J$("#wrapHeader").offset().top, {
+								duration: 700,
+								easing: "easeInOutQuart",
+								axis: 'y',
+								onAfter: function() {}
+							});
+						} else {
+							if (wheel_idx <= 0) { // min
+								wheel_idx = 0;
+								whIdxPaging(this, wh_idx)
+							} else {
+								if (J$('.wheel' + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+									J$(".wheel" + wheel_idx).find('.wr_video').html('');
+								}
+								wheel_idx = wheel_idx - 1;
+								whIdxScrolling(wheel_idx);
+								whIdxMax(wheel_idx);
+							}
+						}
+					} else {
+						if (wh_idx <= 1) {
+							if (J$(".wheel" + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+								J$(".wheel" + wheel_idx).find('.wr_video').html(swf_src[wheel_idx]);
+								resizingWindow();
+							}
+						}
+						wh_idx = wh_idx - 1
+						whIdxPaging(this, wh_idx)
+					}
+				}
+
+				is_anim_sub = true;
+				setTimeout(function() {
+					is_anim_sub = false
+				}, 700);
+			}
+
+			event.stopPropagation();
+			event.preventDefault();
+
+		});
+
+
+
+		J$(document).keydown(function(event) {
+			if (event.keyCode == '38') {
+				//console.log('위 화살키를 누르셨습니다.',wheel_idx);
+				if (wheel_idx <= 0) {
+					wheel_idx = 0;
+				} else {
+					if (J$(".wheel" + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+						J$(".wheel" + wheel_idx).find('.wr_video').html('');
+					}
+					wheel_idx = wheel_idx - 1;
+					if (J$(".wheel" + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+						J$(".wheel" + wheel_idx).find('.wr_video').html(swf_src[wheel_idx]);
+						resizingWindow();
+					}
+					whIdxScrolling(wheel_idx);
+					whIdxFormat(wheel_idx,0);
+				}
+			}
+			else if (event.keyCode == '40') {
+				//console.log('아래 화살키를 누르셨습니다.',wheel_idx);
+				if (J$(".wheel" + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+					J$(".wheel" + wheel_idx).find('.wr_video').html('');
+				}
+				wheel_idx = wheel_idx + 1;
+				if (J$(".wheel" + wheel_idx).find('.ev_cont').hasClass('wr_mov')) {
+					J$(".wheel" + wheel_idx).find('.wr_video').html(swf_src[wheel_idx]);
+					resizingWindow();
+				}
+				if (wheel_idx >= wheel_leg) { // max
+					wheel_idx = wheel_leg-1;
+					console.log (wheel_idx)
+				} else if (wheel_idx <= 0) { // min
+					wheel_idx = 0;
+				} else {
+					whIdxScrolling(wheel_idx);
+					whIdxFormat(wheel_idx,0);
+				}
+			}
+		})
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

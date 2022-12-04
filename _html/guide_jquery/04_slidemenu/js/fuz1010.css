@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+body,p,div,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,table,caption,form,fieldset,legend,input{margin:0; padding:0;}
+li{list-style-type:none;}
+fieldset,img{border:0;}
+li img, li a, dd img{vertical-align:top;}
+.hdd{font-size:0; width:0; height:0; line-height:0; visibility:hidden; position:absolute;}
+legend,caption{font-size:0; width:0; height:0; line-height:0; visibility:hidden; position:absolute;}
+a{text-decoration:none}
+
+body{width:100%; height:100%; font-size:12px; font-family:Malgun Gothic, Dotum; background:url(../img/bg.gif)}
+
+.fixed { position:fixed;top:30px}
+/*.detail{position:absolute; .fixed { position:fixed;top:30px} 추가 - fix위치조정에 따른 문제점 해결*/
+
+.wrap{position:relative; width:100%}
+.container{position:relative; width:100%; margin:0 auto;overflow:hidden}
+.item-box{position:relative; left:100px; width:100%; padding-top:110px}
+.item-box:after{content:''; display:block; clear:both}
+.item{float:left; width:204px; margin:0 0 30px 0; padding:3px 3px 20px; border-radius:3px; box-shadow:0px 2px 3px #ccc; background:#fff}
+.item.png,
+.item.fuz{width:210px; padding:0px; border-radius:0px; box-shadow:none; background:none}
+.item.png > img,
+.item.fuz > img{margin:0}
+.item.tv{width:210px; height:245px; padding:0px; border-radius:0px; box-shadow:none; background:none}
+.item.tv > div{position:relative; width:100%; z-index:2}
+.item.tv > div .notv{position:static; width:185px; height:130px; margin:90px 0 0 10px; z-index:-2}
+.item.tv > div img{position:absolute; top:65px; left:0}
+.item.tv > div p{position:absolute; top:0; left:0; width:100%; font-size:20px; font-family:Lucida Bright, Dotum; font-style:italic; font-weight:bold; letter-spacing:-1px; line-height:1; text-align:center}
+
+.end{display:block; width:248px; margin:50px auto}
+
+.detail{position:absolute;top:0;display:none;  left:100px; top:30px; width:0px; letter-spacing:-1px; color:#333; height:70%; overflow-x:hidden; overflow-y:scroll}/*position:fixed;*/
+.plate{position:relative; width:540px; padding:55px 50px 100px; background:#fff}
+
+
+.detail .close{position:absolute;display:none;top:87px; left:680px}/*position:fixed;*/
+
+.detail{
+scrollbar-face-color: #ff3333;
+scrollbar-track-color: #ccc;
+scrollbar-highlight-color: #ff3333;
+scrollbar-3dlight-color: #ff3333;
+scrollbar-shadow-color: #ccc;
+scrollbar-darkshadow-color: #666;
+scrollbar-arrow-color: #ccc;
+}
+
+
+scrollbar{width:5px}
+
+.detail::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+.detail::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.detail::-webkit-scrollbar-thumb
+{
+	background-color: #ff3333;
+}
+
+
+::-moz-selection{background:red; color:#fff; text-shadow:none}
+::selection{background:red; color:#fff; text-shadow:none}
+
+@media screen and(max-width:420px){
+
+}
+
+.mgT80{margin-top:80px;}

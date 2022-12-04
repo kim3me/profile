@@ -1,0 +1,183 @@
+.contents {
+	background: url("../images/main/bg.gif") no-repeat 50% 0px; height: 1091px; padding-top: 19px; margin-top: -19px; position: relative;
+}
+.contents .bg {
+	left: 50%; top: 50px; text-align: center; margin-left: -517px; position: absolute;
+}
+.wrapCon {
+	margin: 0px auto; top: 43px; width: 985px; height: 972px; position: relative;
+}
+.mH2 {
+	left: 338px; top: 50px; position: absolute;
+}
+.wrapCon h1 {
+	top: 100px; position: relative;
+}
+.tit01 {
+	left: 153px; top: 15px; width: 305px; height: 116px; position: absolute;
+}
+.tit02 {
+	left: 465px; top: 10px; position: absolute;
+}
+.tit03 {
+	left: 549px; position: absolute;
+}
+.tit04 {
+	left: 650px; top: 10px; position: absolute;
+}
+.tit05 {
+	left: 739px; top: 10px; position: absolute;
+}
+p.info01 {
+	left: 323px; top: 245px; position: absolute;
+}
+p.info02 {
+	left: 270px; top: 264px; position: absolute;
+}
+.wrapCon .section02 {
+	background: url("../images/main/dash_line.png") no-repeat 0px 0px; top: 308px; width: 100%; height: 136px; position: relative; z-index: 100;
+}
+.wrapCon .section02 .left01 {
+	width: 205px; height: 136px; float: left; position: relative;
+}
+.wrapCon .section02 .center01 {
+	width: 573px; height: 136px; float: left; position: relative;
+}
+.wrapCon .section02 .right01 {
+	width: 205px; height: 136px; float: left; position: relative;
+}
+.wrapCon .section02 .vline {
+	background: url("../images/main/vline.png") repeat-y 0px 0px; width: 1px; height: 136px; float: left;
+}
+.wrapCon .hline {
+	background: url("../images/main/dash_line.png") no-repeat 0px 0px; top: 446px; width: 100%; height: 1px; position: absolute;
+}
+.footer {
+	height: 118px;
+}
+.iconBox li {
+	left: 0px; top: 0px; position: absolute;
+}
+.f01 {
+	left: 25px; top: 10px; position: absolute;
+}
+.f02 {
+	left: 82px; top: 10px; position: absolute;
+}
+.f03 {
+	left: 142px; top: 10px; position: absolute;
+}
+.f04 {
+	left: 25px; top: 56px; position: absolute;
+}
+.f05 {
+	left: 82px; top: 56px; position: absolute;
+}
+.f06 {
+	left: 142px; top: 56px; position: absolute;
+}
+.f07 {
+	left: 25px; top: 96px; position: absolute;
+}
+.f08 {
+	left: 82px; top: 96px; position: absolute;
+}
+.f09 {
+	left: 142px; top: 96px; position: absolute;
+}
+.mBtn {
+	left: 30px; top: 28px; position: absolute;
+}
+.mBtn .arr {
+	top: 18px; right: 132px; position: absolute;
+}
+.section03 {
+	top: 310px; width: 100%; height: 228px; position: relative;
+}
+.wrapCon .hline01 {
+	background: url("../images/main/dash_line.png") no-repeat 0px 0px; top: 674px; width: 100%; height: 1px; position: absolute;
+}
+.c_icon li {
+	margin-right: 25px; float: left;
+}
+.c_icon {
+	left: 26px; top: 20px; width: 510px; height: 47px; overflow: hidden; position: absolute;
+}
+.mon {
+	left: 30px; top: 84px; width: 162px; height: 128px; overflow: hidden; position: absolute;
+}
+.rom {
+	left: 212px; top: 84px; width: 162px; height: 128px; overflow: hidden; position: absolute;
+}
+.luck {
+	left: 386px; width: 138px; height: 128px; text-align: center; bottom: 15px; overflow: hidden; position: absolute;
+}
+.car {
+	top: 20px; width: 417px; height: 191px; right: 30px; overflow: hidden; position: absolute;
+}
+.mon .wcon {
+	width: 162px; height: 128px; position: absolute;
+}
+.rom .wcon {
+	width: 162px; height: 128px; position: absolute;
+}
+.luck .wcon {
+	width: 138px; height: 128px; position: absolute;
+}
+.car .wcon {
+	width: 417px; height: 191px; position: absolute;
+}
+.mon .wcon .lBox {
+	top: 45px; width: 70px; height: 80px; overflow: hidden; position: absolute;
+}
+.mon .wcon .lBox img {
+	position: absolute;
+}
+.mon .wcon .img02 {
+	left: 81px; top: 43px; position: absolute;
+}
+.mon .wcon .rBox {
+	top: 43px; width: 70px; height: 82px; right: 0px; overflow: hidden; position: absolute;
+}
+.mon .wcon .rBox img {
+	position: absolute;
+}
+.rom .img01 {
+	bottom: 0px; position: absolute;
+}
+.rom .img02 {
+	left: 50px; top: 43px; position: absolute;
+}
+.luck .icon {
+	left: 0px; top: 38px; position: absolute;
+}
+.car .txt {
+	left: 0px; top: 44px; position: absolute;
+}
+.car .carPro {
+	top: 65px; right: 0px; position: absolute;
+}
+.section04 {
+	top: 310px; width: 925px; height: 219px; overflow: hidden; position: relative;
+}
+.section04 .wcon {
+	left: 30px; top: 20px; width: 925px; height: 219px; position: relative;
+}
+.section04 .wcon .fiveBox {
+	top: 31px; width: 550px; height: 188px; right: 0px; position: absolute;
+}
+.section04 .wcon .fiveBox .fbg05 {
+	bottom: 0px; position: absolute;
+}
+.section04 .wcon .fiveBox .fbg04 {
+	bottom: 0px; position: absolute;
+}
+.section04 .wcon .fiveBox .fbg03 {
+	bottom: 0px; position: absolute;
+}
+.section04 .wcon .fiveBox .fbg02 {
+	bottom: 0px; position: absolute;
+}
+.section04 .wcon .fiveBox .fbg01 {
+	bottom: 0px; position: absolute;
+}

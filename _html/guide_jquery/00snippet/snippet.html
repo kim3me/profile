@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>snippet</title>
+	<style type="text/css">
+	/* reset */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+	fieldset,img {border:0 none}
+	dl,ul,ol,menu,li {list-style:none}
+	blockquote, q {quotes:none}
+	blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+	input,select,textarea,button {vertical-align:middle}
+	button {border:0 none;background-color:transparent;cursor:pointer}
+	body {background:#333;}
+	body,th,td,input,select,textarea,button {font-size:12px;line-height:1.5;font-family:'Malgun Gothic','맑은 고딕',sans-serif;color:#000}
+	a {color:#000;text-decoration:none}
+	address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+	table {border-collapse:collapse;border-spacing:0}
+	img {vertical-align:top}
+	.piece {min-width:300px;max-width:600px;padding:10px;margin:10px;background:#fff;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script>
+	$(document).ready (function () {
+		$('.jq_onoff .jq_hide').css('display', 'none');
+		//리스트(ul) onoff
+		$('.jq_onoff').delegate('.jq_toggle', 'click', function() {
+			$(this).parent().toggleClass('on');
+			$(this).siblings('.jq_hide').stop('true','true').slideToggle('fast');
+		});
+	});
+	</script>
+
+	<script>
+	$(document).ready (function () {
+		$('.jq_autoonoff .jq_hide').css('display', 'none');
+		//리스트(ul) 자동 onoff
+		$('ul.jq_autoonoff').delegate('.jq_toggle', 'click', function() {
+			$(this).parent().siblings('.on').toggleClass('on');
+			$(this).parent().siblings().children('.jq_hide').slideUp('fast');
+			$(this).parent().toggleClass('on');
+			$(this).siblings('.jq_hide').stop('true','true').slideToggle('fast');
+		});
+	});
+	</script>
+
+	<script>
+	$(document).ready (function () {
+		//탭(ul) onoff
+		$('.jq_tabonoff .jq_cont').children().css('display', 'none');
+		$('.jq_tabonoff .jq_cont div:first-child').css('display', 'block');
+		$('.jq_tabonoff .jq_tab li:first-child').addClass('on');
+		$('.jq_tabonoff').delegate('.jq_tab li', 'click', function() {
+			var index = $('.jq_tabonoff .jq_tab li').index(this);
+			$(this).siblings().removeClass();
+			$(this).addClass('on');
+			$(this).parent().next('.jq_cont').children().slideUp('fast').eq(index).slideDown('fast');
+		});
+	});
+	</script>
+
+	<script>
+	$(document).ready (function () {
+		//탭(ul) onoff(auto)
+		$('.jq_tabonoff_auto .jq_cont').children().css('display', 'none');
+		$('.jq_tabonoff_auto .jq_cont div:first-child').css('display', 'block');
+		$('.jq_tabonoff_auto .jq_tab li:first-child').addClass('on');
+		function tabonoff(o) {
+			var index = $('.jq_tabonoff_auto .jq_tab li').index(o);
+			console.log (index);
+			$(o).siblings().removeClass();
+			$(o).addClass('on');
+			$(o).parent().next('.jq_cont').children().slideUp('fast').eq(index).slideDown('fast');
+		}
+		(function(a){
+			a.fn.tabonoff_auto=function(p){
+				var s_t_i=p&&p.scroller_time_interval?p.scroller_time_interval:"3000";
+				var dom=a(this); var s_length=dom.length; var timer; var current = 0; begin(); play();
+				function begin(){
+					dom.click(function(){current = dom.index($(this)); play(); stop()});
+					dom.parent().parent().hover(function(){stop();},function(){timer = setTimeout(play,s_t_i);});
+				}
+				function stop(){clearTimeout(timer);}
+				function play(){
+					clearTimeout(timer); tabonoff(dom[current]);
+					if(current >= s_length-1){current = 0;} else{current ++;}
+					timer = setTimeout(play,s_t_i);
+				}
+			}
+		})(jQuery);
+		$(".jq_tabonoff_auto li").tabonoff_auto({
+			scroller_time_interval: '5000',
+		});
+	});
+	</script>
+
+	<script>
+	$(document).ready (function () {
+		//리스트(ul) 아코디언(auto)
+		function accordion(o) {
+			var maxWidth = $(o).parent().children('.on').children('.inner').width();
+			var minWidth = $(o).parent().children().not('.on').children('.inner').width();	
+			$(o).animate({width: maxWidth+"px"}, { queue:false, duration:400});
+			$(o).siblings('.on').animate({width: minWidth+"px"}, { queue:false, duration:400 }).toggleClass('on'); 
+			$(o).addClass('on');
+		}
+
+		(function(a){
+			a.fn.accordion_auto=function(p){
+				var s_t_i=p&&p.scroller_time_interval?p.scroller_time_interval:"3000";
+				var dom=a(this); var s_length=dom.length; var timer; var current = 0; begin(); play();
+				function begin(){
+					dom.click(function(){current = dom.index($(this)); play(); stop()});
+					dom.hover(function(){stop();},function(){timer = setTimeout(play,s_t_i);});
+				}
+				function stop(){clearTimeout(timer);}
+				function play(){
+					clearTimeout(timer); accordion(dom[current]);
+					if(current >= s_length-1){current = 0;} else{current ++;}
+					timer = setTimeout(play,s_t_i);
+				}
+			}
+		})(jQuery);
+
+		$(".jq_accordion_auto li").accordion_auto({
+			scroller_time_interval: '5000',
+		});
+		$('.jq_accordion_auto').delegate('li', 'click', function() {
+			accordion(this);
+		});
+	});
+	</script>
+
+	<script>
+	$(document).ready (function () {
+		//리스트(ul) 아코디언(click)
+		function accordion(o) {
+			var maxWidth = $(o).parent().children('.on').children('.inner').width();
+			var minWidth = $(o).parent().children().not('.on').children('.inner').width();	
+			$(o).animate({width: maxWidth+"px"}, { queue:false, duration:400});
+			$(o).siblings('.on').animate({width: minWidth+"px"}, { queue:false, duration:400 }).toggleClass('on');
+			$(o).addClass('on');
+		}
+
+		$('.jq_accordion').delegate('li', 'click', function() {
+			accordion(this);
+		});
+	});
+	</script>
+
+	<script>
+	$(document).ready (function () {
+		//리스트(ul) 아코디언(hover)
+		function accordion(o) {
+			var maxWidth = $(o).parent().children('.on').children('.inner').width();
+			var minWidth = $(o).parent().children().not('.on').children('.inner').width();	
+			$(o).animate({width: maxWidth+"px"}, { queue:false, duration:400});
+			$(o).siblings('.on').animate({width: minWidth+"px"}, { queue:false, duration:400 }).toggleClass('on'); 
+			$(o).addClass('on');
+		}
+
+		$('.jq_accordion_hover li').hover(function() {
+			accordion(this);
+		});
+	});
+	</script>
+
+</head>
+<body>
+
+
+<div class="piece">
+
+	<h2>리스트(ul) onoff</h2>
+	<!-- //리스트(ul) onoff -->
+	<style type="text/css">
+		.list_menu li {border-bottom:1px solid #ccc}
+		.list_menu .tit {display:block;padding:5px;cursor:pointer}
+		.list_menu .cont {padding:5px;margin-bottom:5px;border:1px solid #d5d5d5;border-radius:5px}
+		.list_menu .on .tit {color:#27b600}
+	</style>
+	<ul class="jq_onoff list_menu">
+		<li><strong class="jq_toggle tit">menu1</strong><p class="jq_hide cont">hide content1</p></li>
+		<li><strong class="jq_toggle tit">menu2</strong><p class="jq_hide cont">hide content2</p></li>
+		<li><strong class="jq_toggle tit">menu3</strong><p class="jq_hide cont">hide content3</p></li>
+		<li><strong class="jq_toggle tit">menu4</strong><p class="jq_hide cont">hide content4</p></li>
+	</ul>
+	<!-- 리스트(ul) onoff// -->
+</div>
+
+
+
+
+
+<div class="piece">
+	<h2>리스트(ul) 자동 onoff</h2>
+	<!-- //리스트(ul) 자동 onoff -->
+	<style type="text/css">
+		.list_menu2 li {border-bottom:1px solid #ccc}
+		.list_menu2 .tit {display:block;padding:5px;cursor:pointer}
+		.list_menu2 .cont {padding:5px;margin-bottom:5px;border:1px solid #d5d5d5;border-radius:5px}
+		.list_menu2 .on .tit {color:#0094fc}
+	</style>
+	<ul class="jq_autoonoff list_menu2">
+		<li><strong class="jq_toggle tit">menu1</strong><p class="jq_hide cont">hide content1</p></li>
+		<li><strong class="jq_toggle tit">menu2</strong><p class="jq_hide cont">hide content2</p></li>
+		<li><strong class="jq_toggle tit">menu3</strong><p class="jq_hide cont">hide content3</p></li>
+		<li><strong class="jq_toggle tit">menu4</strong><p class="jq_hide cont">hide content4</p></li>
+	</ul>
+	<!-- 리스트(ul) 자동 onoff// -->
+</div>
+
+
+
+
+<div class="piece">
+	<h2>단독 onoff</h2>
+	<!-- //단독 onoff -->
+	<style type="text/css">
+		.wr_box {margin-top:10px;border:1px solid #999}
+		.wr_box .tit {padding:5px;cursor:pointer}
+		.wr_box .cont {padding:5px;border-top:1px solid #d5d5d5}
+		.wr_box .on .tit {color:#ff5454;background-color:#ededed}
+	</style>
+	<div class="jq_onoff wr_box">
+		<div class="inner">
+			<h4 class="jq_toggle tit">title</h4>
+			<p class="jq_hide cont">hide content<br>hide content..</p>
+		</div>
+	</div>
+
+	<div class="jq_onoff wr_box">
+		<div class="inner">
+			<h4 class="jq_toggle tit">title</h4>
+			<p class="jq_hide cont">hide content<br>hide content..</p>
+		</div>
+	</div>
+	<!-- 단독 onoff// -->
+</div>
+
+
+
+
+
+<div class="piece">
+	<h2>리스트(ul) tabonoff</h2>
+	<!-- //탭(ul) onoff -->
+	<style type="text/css">
+		.tab_menu {display:table;width:100%;border:1px solid #ccc;}
+		.tab_menu li {display:table-cell;border-left:1px solid #ccc;text-align:center}
+		.tab_menu li:first-child {border-left:0 none}
+		.tab_menu .tit {display:block;padding:5px;color:#888;background-color:#ededed;cursor:pointer}
+		.tab_menu .on .tit {color:#fff;background-color:#27b600}
+		.tab_cont {padding:5px;margin-top:5px;border:1px solid #d5d5d5;border-radius:5px}
+	</style>
+	<div class="jq_tabonoff">
+		<ul class="jq_tab tab_menu">
+			<li><strong class="tit">menu1</strong></li>
+			<li><strong class="tit">menu2</strong></li>
+			<li><strong class="tit">menu3</strong></li>
+			<li><strong class="tit">menu4</strong></li>
+		</ul>
+		<div class="jq_cont tab_cont">
+			<div class="cont">content1<br>content1<br>content1<br>content1<br>content1<br></div>
+			<div class="cont">content2<br>content2<br>content2<br>content2<br>content2<br>content2<br>content2<br>content2<br></div>
+			<div class="cont">content3<br>content3<br>content3<br></div>
+			<div class="cont">content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br></div>
+		</div>
+	</div>
+	<!-- 탭(ul) onoff// -->
+</div>
+
+
+
+
+<div class="piece">
+	<h2>리스트(ul) tabonoff(auto)</h2>
+	<!-- //탭(ul) tabonoff(auto) -->
+	<style type="text/css">
+		.tab_menu {display:table;width:100%;border:1px solid #ccc;}
+		.tab_menu li {display:table-cell;border-left:1px solid #ccc;text-align:center}
+		.tab_menu li:first-child {border-left:0 none}
+		.tab_menu .tit {display:block;padding:5px;color:#888;background-color:#ededed;cursor:pointer}
+		.tab_menu .on .tit {color:#fff;background-color:#27b600}
+		.tab_cont {padding:5px;margin-top:5px;border:1px solid #d5d5d5;border-radius:5px}
+	</style>
+	<div class="jq_tabonoff_auto">
+		<ul class="jq_tab tab_menu">
+			<li><strong class="tit">menu1</strong></li>
+			<li><strong class="tit">menu2</strong></li>
+			<li><strong class="tit">menu3</strong></li>
+			<li><strong class="tit">menu4</strong></li>
+		</ul>
+		<div class="jq_cont tab_cont">
+			<div class="cont">content1<br>content1<br>content1<br>content1<br>content1<br></div>
+			<div class="cont">content2<br>content2<br>content2<br>content2<br>content2<br>content2<br>content2<br>content2<br></div>
+			<div class="cont">content3<br>content3<br>content3<br></div>
+			<div class="cont">content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br>content4<br></div>
+		</div>
+	</div>
+	<!-- 탭(ul) tabonoff(auto)// -->
+</div>
+
+
+
+
+<div class="piece">
+	<h2>리스트(ul) 아코디언(auto)<span class="txt"></span></h2>
+	<!-- //리스트(ul) 아코디언(auto) -->
+	<style type="text/css">
+		.list_menu3 {overflow:hidden}
+		.list_menu3 li {overflow:hidden;float:left;position:relative;margin-right:5px;border:1px solid #d5d5d5;border-radius:5px}
+		.list_menu3 .inner {width:30px;height:130px}
+		.list_menu3 .tit {display:block;position:absolute;top:0;bottom:0;left:0;width:10px;padding:10px;background:#666;color:#fff;word-break:break-all;text-align:center;cursor:pointer}
+		.list_menu3 .cont {width:300px;padding:10px 10px 10px 40px}
+		.list_menu3 .on .inner {width:400px}
+		.list_menu3 .on .tit {color:#00f0ff}
+	</style>
+	<ul class="jq_accordion jq_accordion_auto list_menu3">
+		<li class="on"><div class="inner"><strong class="jq_toggle tit">menu1</strong><p class="jq_hide cont">hide content1</p></div></li>
+		<li><div class="inner"><strong class="jq_toggle tit">menu2</strong><p class="jq_hide cont">hide content2</p></div></li>
+		<li><div class="inner"><strong class="jq_toggle tit">menu3</strong><p class="jq_hide cont">hide content3</p></div></li>
+		<li><div class="inner"><strong class="jq_toggle tit">menu4</strong><p class="jq_hide cont">hide content4</p></div></li>
+	</ul>
+	<!-- 리스트(ul) 아코디언(auto)// -->
+	<span class="span"></span>
+</div>
+
+
+
+
+<div class="piece">
+	<h2>리스트(ul) 아코디언(click)</h2>
+	<!-- //리스트(ul) 아코디언(click) -->
+	<style type="text/css">
+		.list_menu4 {overflow:hidden}
+		.list_menu4 li {overflow:hidden;float:left;position:relative;color:#fff}
+		.list_menu4 .inner {width:50px;height:130px}
+		.list_menu4 .tit {display:block;position:absolute;top:0;bottom:0;left:0;width:10px;padding:20px;color:#fff;word-break:break-all;text-align:center;cursor:pointer}
+		.list_menu4 .menu1 {background:#333}
+		.list_menu4 .menu1 .tit {color:#ff6ece}
+		.list_menu4 .menu2 {background:#555}
+		.list_menu4 .menu2 .tit {color:#fffc00}
+		.list_menu4 .menu3 {background:#777}
+		.list_menu4 .menu3 .tit {color:#12ff00}
+		.list_menu4 .menu4 {background:#999}
+		.list_menu4 .menu4 .tit {color:#00fcff}
+		.list_menu4 .cont {width:300px;padding:20px 10px 10px 60px}
+		.list_menu4 .on .inner {width:400px}
+	</style>
+	<ul class="jq_accordion list_menu4">
+		<li class="menu1 on"><div class="inner"><strong class="jq_toggle tit">menu1</strong><p class="jq_hide cont">hide content1</p></div></li>
+		<li class="menu2"><div class="inner"><strong class="jq_toggle tit">menu2</strong><p class="jq_hide cont">hide content2</p></div></li>
+		<li class="menu3"><div class="inner"><strong class="jq_toggle tit">menu3</strong><p class="jq_hide cont">hide content3</p></div></li>
+		<li class="menu4"><div class="inner"><strong class="jq_toggle tit">menu4</strong><p class="jq_hide cont">hide content4</p></div></li>
+	</ul>
+	<!-- 리스트(ul) 아코디언(click)// -->
+</div>
+
+
+
+
+<div class="piece">
+	<h2>리스트(ul) 아코디언(hover)</h2>
+	<!-- //리스트(ul) 아코디언(hover) -->
+	<ul class="jq_accordion_hover list_menu4">
+		<li class="menu1 on"><div class="inner"><strong class="jq_toggle tit">menu1</strong><p class="jq_hide cont">hide content1</p></div></li>
+		<li class="menu2"><div class="inner"><strong class="jq_toggle tit">menu2</strong><p class="jq_hide cont">hide content2</p></div></li>
+		<li class="menu3"><div class="inner"><strong class="jq_toggle tit">menu3</strong><p class="jq_hide cont">hide content3</p></div></li>
+		<li class="menu4"><div class="inner"><strong class="jq_toggle tit">menu4</strong><p class="jq_hide cont">hide content4</p></div></li>
+	</ul>
+	<!-- 리스트(ul) 아코디언(hover)// -->
+</div>
+
+
+</body>
+</html>
+
+
+

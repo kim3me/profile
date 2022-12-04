@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>MouseWheel</title>
+<style type="text/css">
+	html,body{ overflow:hidden; margin:0; padding:0; font-size:24pt; }
+	#wheelScrollPage>div { position:relative; overflow:hidden;color:#fff; }
+	#wheelScrollPage .box1 {background:#00b6b0;}
+	#wheelScrollPage .box2 {background:#74c500;}
+	#wheelScrollPage .box3 {background:#ff7e00;}
+	#wheelScrollPage .box4 {background:#ff4d83;}
+	#wheelScrollPage .box5 {background:#983bb3;}
+
+	#wheelScrollPaging {position:fixed;top:50%;margin-top:-50px;right:30px}
+	#wheelScrollPaging .link {display:block;width:20px;padding:9px 2px}
+	#wheelScrollPaging .link .link_d  {display:block;background:#fff;width:15px;height:2px;transition:all .5s;text-indent:-9999px;}
+	#wheelScrollPaging .link:hover .link_d,
+	#wheelScrollPaging .link.on .link_d {transform: rotate(45deg) scale(1) skew(0) translate(0);background:#706c6b\9}
+
+</style>
+<script type="text/javascript" src="https://www.etoos.com/common/js/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="jquery.wheelScrollPage.js"></script>
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery('#wheelScrollPage').wheelScrollPage({
+			poPlusV: 500, //긴 컨텐츠 스크롤 이동 간격
+			beHeader: '#Header', //헤더 id 또는 class
+			beFooter: '#Footer', //푸터 id또는 class
+		});
+	});
+</script>
+</head>
+<body>
+
+<div id="Header" style="height:200px">
+Header
+</div>
+
+<div id="wheelScrollPage">
+	<div class="box1"><div style="height:1500px;margin:200px auto;width:1080px;background:#fff;">1</div></div>
+	<div class="box2">2</div>
+	<div class="box3"><div style="height:1500px;margin:200px auto;width:1080px;background:#fff;">3</div></div>
+	<div class="box4">4</div>
+	<div class="box5"><div style="height:1500px;margin:200px auto;width:1080px;background:#fff;">5</div></div>
+</div>
+
+
+<div id="Footer" style="height:200px">
+Footer
+</div>
+
+</body>
+</html>

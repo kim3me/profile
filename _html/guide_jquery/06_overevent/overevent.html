@@ -1,0 +1,248 @@
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>이지미디어</title>
+
+	</head>
+	
+
+	<body>
+
+
+		<link rel="stylesheet" href="http://www.etoos.com/common/css/etoos.css" type="text/css">
+
+		<style>
+			body{margin:20px; background:#f4f4f4}
+			#container {position:relative; width:960px;height:960px;margin:0 auto; padding-bottom:30px;}
+			#container .disB{display:block}
+			#container a.mainList{position:absolute; top:0; left:0; color:#fff}
+			#container .listSpan{position:relative; width:319px; overflow:hidden}
+			#container .listSpec{position:absolute; top:0; left:0; background:rgba(0,0,0,0.5)}
+			#container .listSpan.type1{height:319px;}
+			#container .listSpan.type2{height:159px;}
+			#container .listSpec .info1 strong{font-size:18px; line-height:19px; margin-bottom:8px;}
+			#container .listSpec .info2{width:279px; height:39px; border-top:1px solid #ca555b; padding:0 20px; line-height:39px;}
+			#container .listSpec .info2 .txt{display:inline-block; height:9px; line-height:9px; padding:0 10px; border-right:1px solid #d26c6f; font-size:11px;}
+			#container .listSpec .info2 .txt2{display:inline-block; height:9px; line-height:9px; padding:0 10px; font-size:11px;}
+			#container .type1 .listSpec{width:319px; height:319px;}
+			#container .type1 .listSpec .info1{width:279px; height:239px; padding:20px;}
+			#container .type2 .listSpec .info1{width:279px; height:79px; padding:20px;}
+		</style>
+		<script src="http://www.easymedia.co.kr/common/js/jquery-1.6.4.min.js"></script>
+		<script src="http://www.easymedia.co.kr/common/js/jquery.easing.1.3.js"></script>
+
+		<script type="text/javascript">
+			var lnbnum = -1;
+		</script>
+		<script src="overevent.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery("#container .info2").each(function(){
+					jQuery(this).find(".txt").last().removeClass("txt").addClass("txt2");
+				})
+			})
+		</script>
+
+	<div id="container">
+		<a href="#none" class="mainList disB mainListController" style="top:0; left:0;">
+			<span class="listSpan type1 disB" >
+				<img src="image/1.gif" width="320" alt="가로등 불빛">
+				<span class="listSpec disB" style="display:">
+					<span class="info1 disB">
+						<strong class="kortitle disB">가로등 불빛</strong>
+						<span class="engtitle disB">streetlight</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:0; left:320px;">
+			<span class="listSpan type2 disB">
+				<img src="image/2.jpg" width="320" alt="눈오는 거리">
+				<span class="listSpec disB" style="display:">
+					<span class="info1 disB">
+						<strong class="kortitle disB">눈오는 거리</strong>
+						<span class="engtitle disB">walk in the snow</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:160px; left:320px;">
+			<span class="listSpan type2 disB">
+				<img src="image/3.gif" width="320" alt="따뜻한 차와 카메라">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">따뜻한 차와 카메라</strong>
+						<span class="engtitle disB">Would you like something to drink?</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:0; left:640px;">
+			<span class="listSpan type2 disB">
+				<img src="image/4.gif" width="320" alt="로터리의 밤">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">로터리의 밤</strong>
+						<span class="engtitle disB">rotary</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:160px; left:640px;">
+			<span class="listSpan type1 disB"><!-- 큰것 : type1이 addClass -->
+				<img src="image/5.jpg" height="320" alt="포근한 니트">
+				<span class="listSpec disB" style="display:">
+					<span class="info1 disB">
+						<strong class="kortitle disB">포근한 니트</strong>
+						<span class="engtitle disB">warmth knit</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:320px; left:0px;">
+			<span class="listSpan type2 disB">
+				<img src="image/6.gif" width="320" alt="이별택시">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">이별택시</strong>
+						<span class="engtitle disB">우는손님이 처음인가요 </span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:320px; left:320px;">
+			<span class="listSpan type2 disB">
+				<img src="image/7.gif" width="320" alt="커피머신">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">쓰다 에스프레소</strong>
+						<span class="engtitle disB">뱉는다 커피</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:480px; left:0;">
+			<span class="listSpan type1 disB"><!-- 큰것 : type1이 addClass -->
+				<img src="image/8.jpg" height="320" alt="커피잔">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">커피한잔의 여유</strong>
+						<span class="engtitle disB">품격있는 여자</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:480px; left:320px;">
+			<span class="listSpan type1 disB"><!-- 큰것 : type1이 addClass -->
+				<img src="image/9.gif" width="320" alt="이발소 뱅글뱅글">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">이발소</strong>
+						<span class="engtitle disB">바버</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:480px; left:640px;">
+			<span class="listSpan type2 disB">
+				<img src="image/10.jpg" width="320" alt="크리스마스 장식">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">Christmas</strong>
+						<span class="engtitle disB">집에 크리스마스 분위기 좀 내볼까</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:640px; left:640px;">
+			<span class="listSpan type1 disB"><!-- 큰것 : type1이 addClass -->
+				<img src="image/11.gif" height="320" alt="커피 휘적휘적">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">카페라떼</strong>
+						<span class="engtitle disB">목걸이가 촌스럽네요..</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:800px; left:0;">
+			<span class="listSpan type2 disB">
+				<img src="image/12.gif" width="320" alt="흔들리는 불빛 장식">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">메마른 감성</strong>
+						<span class="engtitle disB">멘트 고갈..</span>
+					</span>
+
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+		<a href="#none" class="mainList disB mainListController" style="top:800px; left:320px;">
+			<span class="listSpan type2 disB">
+				<img src="image/13.gif" width="320" alt="고양이 귀 쫑긋 ">
+				<span class="listSpec disB" style="display:none">
+					<span class="info1 disB">
+						<strong class="kortitle disB">고양이처럼 살고싶다</strong>
+						<span class="engtitle disB">먹고 자고 싸고..</span>
+					</span>
+					<span class="info2 disB">
+						<span class="txt">Website</span>
+
+					</span>
+				</span>
+			</span>
+		</a>
+	</div>
+
+</body>
+</html>

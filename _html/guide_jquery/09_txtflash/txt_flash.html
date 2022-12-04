@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+	<meta charset="utf-8">
+<META http-equiv="X-UA-Compatible" content="IE=edge">
+
+<TITLE>2014 馬기누설</TITLE>
+<LINK href="image/index.css" rel="stylesheet" type="text/css">
+
+<style>
+.contents .bg {left: 50%; top: 50px; text-align: center; margin-left: -517px; position: absolute;}
+.wrapCon {margin: 0px auto; top: 43px; width: 985px; height: 972px; position: relative;}
+.mH2 {	left: 338px; top: 50px; position: absolute;}
+.wrapCon h1 {top: 100px; position: relative;}
+.tit01 {left: 153px; top: 15px; width: 305px; height: 116px; position: absolute}
+.tit02 {left: 465px; top: 10px; position: absolute}
+.tit03 {left: 549px; position: absolute}
+.tit04 {left: 650px; top: 10px; position: absolute}
+.tit05 {left: 739px; top: 10px; position: absolute}
+</style>
+
+<SCRIPT src="image/jquery-2.0.0.min.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="image/TweenMax.min.js" type="text/javascript"></SCRIPT>
+
+<script>
+    $(document).ready(function () {
+        if (navigator.appVersion.indexOf('MSIE 8.0') >= 0 || navigator.appVersion.indexOf('MSIE 7.0') >= 0) {
+
+            TweenMax.to('.tit02', 0, {
+                opacity: 0,
+                ease: Cubic.easeInOut
+            });
+            TweenMax.to('.tit03', 0, {
+                opacity: 0,
+                ease: Cubic.easeInOut
+            });
+            TweenMax.to('.tit04', 0, {
+                opacity: 0,
+                ease: Cubic.easeInOut
+            });
+            TweenMax.to('.tit05', 0, {
+                opacity: 0,
+                ease: Cubic.easeInOut
+            });
+
+        } else {
+
+            TweenMax.to('.tit02', 0, {
+                opacity: 0,
+                scaleX: 2,
+                scaleY: 2,
+                ease: Cubic.easeInOut
+            });
+            TweenMax.to('.tit03', 0, {
+                opacity: 0,
+                scaleX: 2,
+                scaleY: 2,
+                ease: Cubic.easeInOut
+            });
+            TweenMax.to('.tit04', 0, {
+                opacity: 0,
+                scaleX: 2,
+                scaleY: 2,
+                ease: Cubic.easeInOut
+            });
+            TweenMax.to('.tit05', 0, {
+                opacity: 0,
+                scaleX: 2,
+                scaleY: 2,
+                ease: Cubic.easeInOut
+            });
+        }
+
+       
+        var tl = new TimelineMax();
+        var dTime = 0.5;
+        var titXpox = [153, 465, 549, 650, 739];
+        var titYpox = [15, 10, 0, 10, 10];
+        var dTime = 1;
+        var sec03Wid = [162, 162, 138, 417];
+
+        TweenMax.to('.mH2', 0, {
+            top: '30px',
+            opacity: 0,
+            ease: Cubic.easeInOut
+        });
+        TweenMax.to('.tit01', 0, {
+            left: '50%',
+            marginLeft: '-152px',
+            opacity: 0
+        });
+
+
+        tl.to('.bg', 0, {
+            left: "-500px",
+            opacity: 0
+        })
+            .to('.bg', 0.5, {
+                left: "50%",
+                opacity: 1,
+                ease: Cubic.easeInOut
+            })
+            .to('.mH2', 0.5, {
+                top: '58px',
+                opacity: 1,
+                ease: Cubic.easeInOut
+            })
+            .to('.tit01', 1, {
+                left: '50%',
+                marginLeft: '-152px',
+                opacity: 1,
+                onComplete: function () {
+                    TweenMax.to('.tit01', 0.3, {
+                        left: titXpox[0] + 'px',
+                        marginLeft: '0px',
+                        ease: Cubic.easeOut
+                    })
+                },
+                ease: Cubic.easeInOut
+            })
+            .to('.tit02', 0.5, {
+                opacity: 1,
+                scaleX: 1,
+                scaleY: 1,
+                ease: Bounce.easeOut
+            })
+            .to('.tit03', 0.5, {
+                opacity: 1,
+                scaleX: 1,
+                scaleY: 1,
+                ease: Bounce.easeOut,
+                delay: -0.2
+            })
+            .to('.tit04', 0.5, {
+                opacity: 1,
+                scaleX: 1,
+                scaleY: 1,
+                ease: Bounce.easeOut,
+                delay: -0.2
+            })
+            .to('.tit05', 0.5, {
+                opacity: 1,
+                scaleX: 1,
+                scaleY: 1,
+                ease: Bounce.easeOut,
+                delay: -0.2
+            })
+
+    })
+</script>
+
+
+<META name="GENERATOR" content="MSHTML 11.00.9600.16518"></HEAD>
+
+<BODY>
+
+<DIV id="wrapper">
+	<!-- contents -->
+	<DIV class="contents">
+		<IMG class="bg" alt="" src="image/card_bg.png">
+		<DIV class="wrapCon">
+			<H2 class="mH2"><IMG alt="REVEAL THE SECRETS OF NATURE" src="image/main_top_h2.png"></H2>
+			<H1>
+			<IMG class="tit01" alt="2014" src="image/tit01.png">
+			<IMG class="tit02" alt="馬" src="image/tit02.png">
+			<IMG class="tit03" alt="기" src="image/tit03.png">
+			<IMG class="tit04" alt="누" src="image/tit04.png">
+			<IMG class="tit05" alt="설" src="image/tit05.png">
+			</H1>
+		</DIV>
+	</DIV>
+	<!-- //contents -->
+</DIV>
+
+</BODY>
+</HTML>

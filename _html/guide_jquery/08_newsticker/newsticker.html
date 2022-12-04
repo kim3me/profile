@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>http://www.blueb.co.kr</title>
+
+<style type="text/css" media="all">
+body,html{padding:30px;margin: 0;}
+a {text-decoration:none;color:#444}
+a:hover {color:#003399}
+h3 {font-family:돋움;color:#999}
+
+/*샘플1 스타일*/
+.newsticker {position:relative;overflow:hidden;width:410px;height:21px;text-align:left;border:1px solid #999}
+.newsticker ul {padding:0;margin:0}
+.newsticker ul li {float:left;width:410px;;padding:0;font-size:12px;color:#97a3a9;letter-spacing:-1px;height:21px;line-height:21px;list-style:none;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.newsticker ul li a {color:#97a3a9}
+.newsticker ul li strong {color:#78a7be}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="jquery.newsticker.js"></script>
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery('#newsticker1').Vnewsticker({
+			speed: 700,         //스크롤 스피드
+			pause: 2000,        //잠시 대기 시간
+			mousePause: true,   //마우스 오버시 일시정지(true=일시정지)
+			showItems: 1,       //스크롤 목록 갯수 지정(1=한줄만 보임)
+			direction : "left"    //left=옆으로스크롤, up=위로스크롤, 공란=아래로 스크롤
+		});
+
+		jQuery('#newsticker2').Vnewsticker({
+			speed: 700,         //스크롤 스피드
+			pause: 2000,        //잠시 대기 시간
+			mousePause: true,   //마우스 오버시 일시정지(true=일시정지)
+			showItems: 1,       //스크롤 목록 갯수 지정(1=한줄만 보임)
+			direction : "Up"    //left=옆으로스크롤, up=위로스크롤, 공란=아래로 스크롤
+		});
+
+		jQuery('#newsticker3').Vnewsticker({
+			speed: 700,         //스크롤 스피드
+			pause: 2000,        //잠시 대기 시간
+			mousePause: true,   //마우스 오버시 일시정지(true=일시정지)
+			showItems: 3,       //스크롤 목록 갯수 지정(1=한줄만 보임)
+			direction : "Up"    //left=옆으로스크롤, up=위로스크롤, 공란=아래로 스크롤
+		});
+		
+		jQuery('#newsticker4').Vnewsticker({
+			speed: 700,         //스크롤 스피드
+			pause: 2000,        //잠시 대기 시간
+			mousePause: true,   //마우스 오버시 일시정지(true=일시정지)
+			showItems: 2,       //스크롤 목록 갯수 지정(1=한줄만 보임)
+			direction : ""    //left=옆으로스크롤, up=위로스크롤, 공란=아래로 스크롤
+		});
+	});
+</script>
+</head>
+<body>
+
+<h3>1줄 Slide 뉴스티커 샘플</h3>
+<div id="newsticker1" class="newsticker">
+	<ul>
+		<li><strong>cncn**</strong> &nbsp;화학처음하는데 기초를너무잘잡아주시네요  </li>
+		<li><strong>bibianr**</strong> &nbsp;일반적인 예시를 들어서 이해하기 쉽고, 화학이 재미있어져요. </li>
+		<li><strong>wndus**</strong> &nbsp;꼼꼼하고 뭘 잘모르고 있는지 꿰뚫고 있는거같아요!! </li>
+		<li><strong>whddns70**</strong> &nbsp;6강만에 생물의 틀을 잡아주신다는게 정말 좋았다 </li>
+		<li><strong>jiya02**</strong> &nbsp;기본 개념 확실하게 정리할 수 있어서 좋습니다.</li>
+		<li><strong>arekimed**</strong> &nbsp;생물을 암기다라는 고정관념을 깨드려주신것같애요</li>
+		<li><strong>guscod**</strong> &nbsp;어느정도 아는데 용어정리가 안된다거나, 사소한것때문에 아깝게 틀린다면 추천!!</li>
+		<li><strong>vivace10**</strong> &nbsp;여러가지 자료를 활용하여 가르쳐주시는 모습이 너무 좋았고, 이해하는데 많은 도움이 되었다. </li>
+		<li><strong>doslsq**</strong> &nbsp;지구과학에 필요한 기초적인 내용을 다시한번 복습할 수 있어 좋다. </li>
+	</ul>
+</div>
+
+<h3>1줄 Up 뉴스티커 샘플</h3>
+<div id="newsticker2" class="newsticker">
+	<ul>
+		<li><strong>cncn**</strong> &nbsp;화학처음하는데 기초를너무잘잡아주시네요  </li>
+		<li><strong>bibianr**</strong> &nbsp;일반적인 예시를 들어서 이해하기 쉽고, 화학이 재미있어져요. </li>
+		<li><strong>wndus**</strong> &nbsp;꼼꼼하고 뭘 잘모르고 있는지 꿰뚫고 있는거같아요!! </li>
+		<li><strong>whddns70**</strong> &nbsp;6강만에 생물의 틀을 잡아주신다는게 정말 좋았다 </li>
+		<li><strong>jiya02**</strong> &nbsp;기본 개념 확실하게 정리할 수 있어서 좋습니다.</li>
+		<li><strong>arekimed**</strong> &nbsp;생물을 암기다라는 고정관념을 깨드려주신것같애요</li>
+		<li><strong>guscod**</strong> &nbsp;어느정도 아는데 용어정리가 안된다거나, 사소한것때문에 아깝게 틀린다면 추천!!</li>
+		<li><strong>vivace10**</strong> &nbsp;여러가지 자료를 활용하여 가르쳐주시는 모습이 너무 좋았고, 이해하는데 많은 도움이 되었다. </li>
+		<li><strong>doslsq**</strong> &nbsp;지구과학에 필요한 기초적인 내용을 다시한번 복습할 수 있어 좋다. </li>
+	</ul>
+</div>
+
+<h3>3줄 Up 뉴스티커 샘플</h3>
+<div id="newsticker3" class="newsticker">
+	<ul>
+		<li><strong>cncn**</strong> &nbsp;화학처음하는데 기초를너무잘잡아주시네요  </li>
+		<li><strong>bibianr**</strong> &nbsp;일반적인 예시를 들어서 이해하기 쉽고, 화학이 재미있어져요. </li>
+		<li><strong>wndus**</strong> &nbsp;꼼꼼하고 뭘 잘모르고 있는지 꿰뚫고 있는거같아요!! </li>
+		<li><strong>whddns70**</strong> &nbsp;6강만에 생물의 틀을 잡아주신다는게 정말 좋았다 </li>
+		<li><strong>jiya02**</strong> &nbsp;기본 개념 확실하게 정리할 수 있어서 좋습니다.</li>
+		<li><strong>arekimed**</strong> &nbsp;생물을 암기다라는 고정관념을 깨드려주신것같애요</li>
+		<li><strong>guscod**</strong> &nbsp;어느정도 아는데 용어정리가 안된다거나, 사소한것때문에 아깝게 틀린다면 추천!!</li>
+		<li><strong>vivace10**</strong> &nbsp;여러가지 자료를 활용하여 가르쳐주시는 모습이 너무 좋았고, 이해하는데 많은 도움이 되었다. </li>
+		<li><strong>doslsq**</strong> &nbsp;지구과학에 필요한 기초적인 내용을 다시한번 복습할 수 있어 좋다. </li>
+	</ul>
+</div>
+
+
+<h3>2줄 Down 뉴스티커 샘플</h3>
+<div id="newsticker4" class="newsticker">
+	<ul>
+		<li><strong>cncn**</strong> &nbsp;화학처음하는데 기초를너무잘잡아주시네요  </li>
+		<li><strong>bibianr**</strong> &nbsp;일반적인 예시를 들어서 이해하기 쉽고, 화학이 재미있어져요. </li>
+		<li><strong>wndus**</strong> &nbsp;꼼꼼하고 뭘 잘모르고 있는지 꿰뚫고 있는거같아요!! </li>
+		<li><strong>whddns70**</strong> &nbsp;6강만에 생물의 틀을 잡아주신다는게 정말 좋았다 </li>
+		<li><strong>jiya02**</strong> &nbsp;기본 개념 확실하게 정리할 수 있어서 좋습니다.</li>
+		<li><strong>arekimed**</strong> &nbsp;생물을 암기다라는 고정관념을 깨드려주신것같애요</li>
+		<li><strong>guscod**</strong> &nbsp;어느정도 아는데 용어정리가 안된다거나, 사소한것때문에 아깝게 틀린다면 추천!!</li>
+		<li><strong>vivace10**</strong> &nbsp;여러가지 자료를 활용하여 가르쳐주시는 모습이 너무 좋았고, 이해하는데 많은 도움이 되었다. </li>
+		<li><strong>doslsq**</strong> &nbsp;지구과학에 필요한 기초적인 내용을 다시한번 복습할 수 있어 좋다. </li>
+	</ul>
+</div>
+
+
+</body></html>

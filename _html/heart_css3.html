@@ -1,0 +1,106 @@
+
+
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="Referrer" content="origin">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title> heart css3 </title>
+
+	<style>
+html, body {height: 100%;}
+
+body {background-color:#000;min-height: 100%;overflow: hidden;}
+
+/* 큰 하트 */
+@keyframes moveL{
+	from{bottom:0;opacity:0;transform: rotate(0);-webkit-transform: rotate(0)}
+	33%{left:-20px;opacity:1;transform: rotate(-5deg);-webkit-transform: rotate(-5deg)}
+	66%{left:20px;transform: rotate(5deg);-webkit-transform: rotate(5deg)}
+	to{bottom:350px;left:-40px;opacity:0;transform: rotate(-10deg);-webkit-transform: rotate(-10deg)}
+}
+@keyframes moveR{
+	from{bottom:0;opacity:0;transform: rotate(0);-webkit-transform: rotate(0)}
+	33%{left:20px;opacity:1;transform: rotate(5deg);-webkit-transform: rotate(5deg)}
+	66%{left:-20px;;transform: rotate(-5deg);-webkit-transform: rotate(-5deg)}
+	to{bottom:350px;left:40px;opacity:0;transform: rotate(10deg);-webkit-transform: rotate(10deg)}
+}
+
+.wr_heart {position:absolute;top:500px;left:50%;margin-left:-141px;height:125px;width:82px}
+.wr_heart .heart {position:absolute;bottom:0;left:50%;margin-left:-41px;width:82px}
+.wr_heart .heart:before {content:'';position:absolute;bottom:0;left:0; height:125px;width:82px;background-repeat:no-repeat;opacity:0;animation: moveR 1.5s ease-out 0.4s infinite}
+/*.wr_heart .heart:after {content:'';position:absolute;bottom:0;left:50%;margin-left:-41px;width:82px;border-bottom:1px solid red} 시작 위치확인*/
+.wr_heart .heart:nth-child(1) {transform: rotate(-30deg)}
+.wr_heart .heart:nth-child(2) {transform: rotate(30deg)}
+.wr_heart .heart:nth-child(3) {transform: rotate(-10deg)}
+.wr_heart .heart:nth-child(4) {transform: rotate(5deg)}
+.wr_heart .heart:nth-child(5) {transform: rotate(12deg)}
+.wr_heart .heart:nth-child(6) {transform: rotate(-14deg)}
+.wr_heart .heart:nth-child(7) {transform: rotate(-16deg)}
+.wr_heart .heart:nth-child(8) {transform: rotate(16deg)}
+.wr_heart .heart:nth-child(1):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h1.png');animation-name: moveR; animation-delay:0.4s}
+.wr_heart .heart:nth-child(2):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h2.png');animation-name: moveL; animation-delay:0.5s}
+.wr_heart .heart:nth-child(3):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h3.png');animation-name: moveR; animation-delay:0.6s}
+.wr_heart .heart:nth-child(4):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h4.png');animation-name: moveL; animation-delay:0.2s}
+.wr_heart .heart:nth-child(5):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h5.png');animation-name: moveL; animation-delay:1.0s}
+.wr_heart .heart:nth-child(6):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h6.png');animation-name: moveL; animation-delay:0.0s}
+.wr_heart .heart:nth-child(7):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h7.png');animation-name: moveL; animation-delay:1.3s}
+.wr_heart .heart:nth-child(8):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/h8.png');animation-name: moveR; animation-delay:0.6s}
+/* 큰 하트 */
+
+
+/* //작은 하트 */
+@keyframes moveL2{
+	from{bottom:0;opacity:0;transform: rotate(0);-webkit-transform: rotate(0) scale(0.0) }
+	33%{left:-5px;opacity:1;transform: rotate(-5deg);-webkit-transform: rotate(-5deg) scale(1) }
+	66%{left:5px;transform: rotate(5deg);-webkit-transform: rotate(5deg) scale(0.9)}
+	to{bottom:150px;left:-10px;opacity:0;transform: rotate(-10deg);-webkit-transform: rotate(-10deg) scale(0.5)}
+}
+@keyframes moveR2{
+	from{bottom:0;opacity:0;transform: rotate(0);-webkit-transform: rotate(0) scale(0.2)}
+	33%{left:5px;opacity:1;transform: rotate(5deg);-webkit-transform: rotate(5deg) scale(1)}
+	66%{left:-5px;;transform: rotate(-5deg);-webkit-transform: rotate(-5deg) scale(1)}
+	to{bottom:150px;left:10px;opacity:0;transform: rotate(10deg);-webkit-transform: rotate(10deg) scale(0.2)}
+}
+
+.wr_heart2 {position:absolute;top:600px;left:50%;margin-left:200px;height:43px;width:28px}
+.wr_heart2 .heart {position:absolute;bottom:0;left:50%;margin-left:-14px;width:28px}
+.wr_heart2 .heart:before {content:'';position:absolute;bottom:0;left:0; height:43px;width:28px;background-repeat:no-repeat;opacity:0;animation: moveR2 1.5s ease-out 0.4s infinite}
+/*.wr_heart2 .heart:after {content:'';position:absolute;bottom:0;left:50%;margin-left:-41px;width:82px;border-bottom:1px solid red} 시작 위치확인*/
+.wr_heart2 .heart:nth-child(1) {transform: rotate(10deg)}
+.wr_heart2 .heart:nth-child(2) {transform: rotate(25deg)}
+.wr_heart2 .heart:nth-child(3) {transform: rotate(-10deg)}
+.wr_heart2 .heart:nth-child(1):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/hs1.png');animation-name: moveR2; animation-delay:0.0s}
+.wr_heart2 .heart:nth-child(2):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/hs2.png');animation-name: moveL2; animation-delay:0.4s}
+.wr_heart2 .heart:nth-child(3):before {background-image:url('http://img.etoos.com/lecture/promotion/2017/10/guide_g2/hs3.png');animation-name: moveR2; animation-delay:0.2s}
+/* 작은 하트// */
+
+	</style>
+</head>
+
+<body>
+	<!-- //큰 하트 -->
+	<div class="wr_heart ">
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+	</div>
+	<!-- 큰 하트// -->
+
+	<!-- //작은 하트 -->
+	<div class="wr_heart2">
+		<div class="heart"></div>
+		<div class="heart"></div>
+		<div class="heart"></div>
+	</div>
+	<!-- 작은 하트// -->
+
+</body>
+</html>

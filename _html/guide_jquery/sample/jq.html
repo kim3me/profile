@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Flip + Slide + Up</title>
+
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
+
+
+
+
+
+	<style type="text/css" media="all">
+	.flip_tch {position:relative;overflow:hidden;width:663px;height:350px;text-align:left}
+	.flip_tch ul {padding:0;margin:0}
+	.flip_tch ul li {position:relative;float:left;overflow:hidden;width:221px;height:351px;background: url('http://img.historyrang.com/bg_dot.gif') 0 0 repeat}
+	.flip_tch .tch_hover1 {position:absolute;top:0;padding-left:20px;border-bottom: 1px solid #494646;border-right: 1px solid #494646;}
+	.flip_tch .tch_hover2 {position:absolute;top:0;left:221px;padding-left:20px;border-bottom: 1px solid #494646;border-right: 1px solid #494646;background:#333}
+	</style>
+
+
+	<script>
+	$(document).ready (function () {
+
+		function flip1() {
+			$(".jq_flip_auto li").children('.tch_hover1').animate({left:'-221px'},200, function() { jQuery(this).css('left','221px')});
+			$(".jq_flip_auto li").children('.tch_hover2').animate({left:'0'},200);
+		}
+
+		function flip2() {
+			$(".jq_flip_auto li").children('.tch_hover1').animate({left:'0px'},200);
+			$(".jq_flip_auto li").children('.tch_hover2').animate({left:'-221px'},200, function() { jQuery(this).css('left','221px')});
+		}
+
+		(function(a){
+			a.fn.flip_auto=function(p){
+				var s_t_i=p&&p.scroller_time_interval?p.scroller_time_interval:"2000";
+				var dom=$(".jq_flip_auto");
+				var timer;
+				var curtainopen = false;
+				begin();
+				play();
+				function begin(){
+					dom.hover(function(){
+							stop();
+						},
+						function(){
+							timer = setTimeout(play,s_t_i);
+						}
+					);
+				}
+				function stop(){
+					clearTimeout(timer);
+				}
+				function play(){
+					clearTimeout(timer);
+					if (curtainopen == false){ 
+						flip1();
+						curtainopen = true;
+					}else{
+						flip2();
+						curtainopen = false;
+					}
+					timer = setTimeout(play,s_t_i);
+				}
+			}
+		})(jQuery);
+
+		$(".jq_flip_auto").flip_auto();
+	});
+	</script>
+
+<h3>Flip</h3>
+<div class="jq_flip_auto flip_tch">
+	<ul>
+		<li>
+			<div class="tch_hover1"><a href="#"><img src="http://img.historyrang.com/teacher/000001/main2_tch.png" alt="설민석"></a></div>
+			<div class="tch_hover2"><a href="#"><img src="http://img.historyrang.com/teacher/000004/main2_tch.png" alt="배준환"></a></div>
+		</li>
+		<li>
+			<div class="tch_hover1"><a href="#"><img src="http://img.historyrang.com/teacher/000002/main2_tch.png" alt="황현필"></a></div>
+			<div class="tch_hover2"><a href="#"><img src="http://img.historyrang.com/teacher/000008/main2_tch.png" alt="은동진"></a></div>
+		</li>
+		<li>
+			<div class="tch_hover1"><a href="#"><img src="http://img.historyrang.com/teacher/000003/main2_tch.png" alt="황현필"></a></div>
+			<div class="tch_hover2"><a href="#"><img src="http://img.historyrang.com/teacher/000001/main2_tch.png" alt="은동진"></a></div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style type="text/css" media="all">
+	body,html{padding:30px;margin: 0;}
+	a {text-decoration:none;color:#444}
+	a:hover {color:#003399}
+	h3 {font-family:돋움;color:#999}
+
+	/*샘플1 스타일*/
+	.newsticker {position:relative;overflow:hidden;width:663px;height:350px;text-align:left}
+	.newsticker ul {padding:0;margin:0}
+	.newsticker ul li {float:left;width:663px;height:351px;font-size:12px;color:#97a3a9;letter-spacing:-1px;list-style:none;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;background: #5b5757 url('http://img.historyrang.com/bg_dot.gif') 0 0 repeat}
+	.newsticker .tch_hover {float:left;padding-left:20px;border-bottom: 1px solid #494646;border-right: 1px solid #494646;}
+
+	</style>
+
+
+
+<script type="text/javascript" src="jquery.newsticker.js"></script>
+
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery('#newsticker1').Vnewsticker({
+			speed: 700,         //스크롤 스피드
+			pause: 2000,        //잠시 대기 시간
+			mousePause: true,   //마우스 오버시 일시정지(true=일시정지)
+			showItems: 1,       //스크롤 목록 갯수 지정(1=한줄만 보임)
+			direction : "left"    //left=옆으로스크롤, up=위로스크롤, 공란=아래로 스크롤
+		});
+
+		jQuery('#newsticker2').Vnewsticker({
+			speed: 700,         //스크롤 스피드
+			pause: 2000,        //잠시 대기 시간
+			mousePause: true,   //마우스 오버시 일시정지(true=일시정지)
+			showItems: 1,       //스크롤 목록 갯수 지정(1=한줄만 보임)
+			direction : "Up"    //left=옆으로스크롤, up=위로스크롤, 공란=아래로 스크롤
+		});
+
+	});
+</script>
+
+</head>
+<body>
+
+
+<h3>Slide</h3>
+<div id="newsticker1" class="newsticker">
+	<ul>
+		<li>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000001/main2_tch.png" alt="설민석"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000004/main2_tch.png" alt="배준환"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000003/main2_tch.png" alt="박통"></div>
+		</li> 
+		<li>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000002/main2_tch.png" alt="황현필"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000008/main2_tch.png" alt="은동진"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000001/main2_tch.png" alt="설민석"></div>
+		</li>
+	</ul>
+</div>
+
+
+<h3>Up</h3>
+<div id="newsticker2" class="newsticker">
+	<ul>
+		<li>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000001/main2_tch.png" alt="설민석"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000004/main2_tch.png" alt="배준환"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000003/main2_tch.png" alt="박통"></div>
+		</li>
+		<li>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000002/main2_tch.png" alt="황현필"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000008/main2_tch.png" alt="은동진"></div>
+			<div class="tch_hover"><img src="http://img.historyrang.com/teacher/000001/main2_tch.png" alt="설민석"></div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+</body>
+</html>

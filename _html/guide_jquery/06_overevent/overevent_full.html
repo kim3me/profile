@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8" />
+<title>이지미디어</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+
+
+<body>
+
+
+<link rel="stylesheet" href="http://www.etoos.com/common/css/etoos.css" type="text/css">
+
+<style>
+body {}
+#wrapSsak {overflow:hidden;width:100%;background:#f4f4f4;text-align:center}
+#photoGallery {width:101%;padding:0;position:relative;overflow:hidden;text-align:left}
+#photoGallery .disB{display:block}
+#photoGallery li.mainList{float:left;overflow:hidden;width:33.3%;padding:0 1px 1px 0;color:#fff}
+#photoGallery .listSpan{display:block;overflow:hidden;position:relative;height:100%}
+#photoGallery .listSpan img {width:100%;height:100%;}
+#photoGallery .listSpan.type1 img {width:100%;height:auto}
+#photoGallery .listSpan.type2 img {height:100%;width:100%}
+#photoGallery .listSpec {display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:url('image/bg.png')}
+#photoGallery .listSpec .info1 {display:block;padding:20px;}
+#photoGallery .listSpec .info1 strong {display:block;font-size:18px; line-height:19px; margin-bottom:8px;}
+#photoGallery .listSpec .info2 {position:absolute;bottom:0;left:0;right:0;padding:0 20px;height:39px; border-top:1px solid #ca555b; padding:0 20px; line-height:39px;}
+#photoGallery .listSpec .info2 .txt {display:inline-block; height:9px; line-height:9px; padding:0 10px; margin-right:6px; border-right:1px solid #d26c6f; font-size:11px;color:#bbb}
+#photoGallery .listSpec .info2 a {font-size:11px;color:#fff}
+#photoGallery .listSpec .info2 .txt2 {display:inline-block; height:9px; line-height:9px; padding:0 10px; font-size:11px;}
+.w_4 #photoGallery li.mainList{width:24.8%}
+.w_3 #photoGallery li.mainList{width:33%}
+.w_2 #photoGallery li.mainList{width:49.7%}
+.w_1 #photoGallery li.mainList{width:100%}
+</style>
+<script src="http://www.easymedia.co.kr/common/js/jquery-1.6.4.min.js"></script>
+<script src="http://www.easymedia.co.kr/common/js/jquery.easing.1.3.js"></script>
+<script src="overevent.js"></script>
+
+<script>
+
+$(document).ready (function () { resizingWindow() });
+$( window ).resize(function () { resizingWindow() });
+function resizingWindow() {
+	var w;
+	if (self.innerWidth){
+		// IE 외 모든 브라우저
+		w = self.innerWidth;
+	}
+	else if (document.documentElement && document.documentElement.clientWidth){
+		// IE 6 Strict
+		w = document.documentElement.clientWidth;
+	}
+	else if (document.body){
+		// IE
+		w = document.body.clientWidth;
+	}
+	;
+
+
+	if (w >= 1024 ) {
+		$('#wrapSsak').removeClass().addClass('w_4');
+	}
+	else if (w < 1024 & w > 720) {
+		$('#wrapSsak').removeClass().addClass('w_3');
+	}
+	else if (w < 720 & w > 420) {
+		$('#wrapSsak').removeClass().addClass('w_2');
+	}
+	else if (w < 420) {
+		$('#wrapSsak').removeClass().addClass('w_1');
+	}
+	mainListWidth = $('.mainList').width();
+	$('.mainList').css('height', parseInt(mainListWidth*0.6)+'px');
+}
+</script>
+
+<div id="wrapSsak">
+
+	<ul id="photoGallery">
+		<li class="mainList">
+			<div class="listSpan type1" >
+				<img src="image/1.gif" alt="가로등 불빛">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">가로등 불빛</strong>
+						<span class="engtitle">streetlight</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/2.jpg" alt="눈오는 거리">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">눈오는 거리</strong>
+						<span class="engtitle">walk in the snow</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/3.gif" alt="따뜻한 차와 카메라">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">따뜻한 차와 카메라</strong>
+						<span class="engtitle">Would you like something to drink?</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/4.gif" alt="로터리의 밤">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">로터리의 밤</strong>
+						<span class="engtitle">rotary</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type1">
+				<img src="image/5.jpg" alt="포근한 니트">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">포근한 니트</strong>
+						<span class="engtitle">warmth knit</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/6.gif" alt="이별택시">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">이별택시</strong>
+						<span class="engtitle">우는손님이 처음인가요 </span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/7.gif" alt="커피머신">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">쓰다 에스프레소</strong>
+						<span class="engtitle">뱉는다 커피</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/8.jpg" alt="커피잔">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">커피한잔의 여유</strong>
+						<span class="engtitle">품격있는 여자</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type1">
+				<img src="image/9.gif" alt="이발소 뱅글뱅글">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">이발소</strong>
+						<span class="engtitle">바버</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/10.jpg" alt="크리스마스 장식">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">Christmas</strong>
+						<span class="engtitle">집에 크리스마스 분위기 좀 내볼까</span>
+					</div>
+					<span class="info2">
+					<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a>
+					</span>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/11.gif" alt="커피 휘적휘적">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">카페라떼</strong>
+						<span class="engtitle">목걸이가 촌스럽네요..</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a> 
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="mainList">
+			<div class="listSpan type2">
+				<img src="image/12.gif" alt="흔들리는 불빛 장식">
+				<div class="listSpec">
+					<div class="info1">
+						<strong class="kortitle">메마른 감성</strong>
+						<span class="engtitle">멘트 고갈..</span>
+					</div>
+					<div class="info2">
+						<span class="txt">Website</span> <a href="http://www.naver.com">http://www.naver.com</a> 
+					</div>
+				</div>
+			</div>
+		</li>
+
+	</ul>
+
+</div>
+</body>
+</html>

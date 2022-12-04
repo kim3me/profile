@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+	<meta charset="utf-8">
+<title> 이투스 :: 내가 앞서가는 힘, 이투스 </title>
+<link rel="stylesheet" href="https://www.etoos.com/common/css/etoos.css" type="text/css">
+<link rel="stylesheet" href="https://www.etoos.com/common/css/etoos_comm2013.css" type="text/css">
+<script language="javascript" src="https://www.etoos.com/common/js/etoos.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.etoos.com/common/js/prototype.js"></script>
+
+<link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css">
+
+</head>
+
+<body>
+
+
+<table width="136" border="0" cellspacing="0" cellpadding="0" id="nickNameView" name="nickNameView" style="display:none;position:absolute;z-index:1;">  <tbody><tr id="menuMyRoom">  <td><img src="http://img.etoos.com/Community/30_off.gif" style="cursor:hand;" onclick="javascript:actionMyStudy();" onmouseover="javascript:this.src='http://img.etoos.com/Community/30_on.gif'" onmouseout="javascript:this.src='http://img.etoos.com/Community/30_off.gif'"></td>  </tr>  <tr id="menuBoardList">  <td><img src="http://img.etoos.com/Community/31_off.gif" style="cursor:hand;" onclick="javascript:actionBoardList();" onmouseover="javascript:this.src='http://img.etoos.com/Community/31_on.gif'" onmouseout="javascript:this.src='http://img.etoos.com/Community/31_off.gif'"></td>  </tr>  <tr id="menuTeacher">    <td><img src="http://img.etoos.com/Community/21_off.gif" style="cursor:hand;" onclick="javascript:actionTeacherMain();" onmouseover="javascript:this.src='http://img.etoos.com/Community/21_on.gif'" onmouseout="javascript:this.src='http://img.etoos.com/Community/21_off.gif'"></td>  </tr>  <tr id="menuRing_add_dis">  <td><img src="http://img.etoos.com/Community/27_off.gif"></td>  </tr>  <tr id="menuBoardList_dis">  <td><img src="http://img.etoos.com/Community/31_off.gif"></td>  </tr>  <tr id="menuRing_del_dis">  <td><img src="http://img.etoos.com/Community/28_off.gif"></td>  </tr>  <tr id="menuMsgSend_dis">  <td><img src="http://img.etoos.com/Community/29_off.gif"></td>  </tr>  <tr id="menuRing_add">  <td><img src="http://img.etoos.com/Community/27_off.gif" style="cursor:hand;" onclick="javascript:actionFriend_add();" onmouseover="javascript:this.src='http://img.etoos.com/Community/27_on.gif'" onmouseout="javascript:this.src='http://img.etoos.com/Community/27_off.gif'"></td>  </tr>  <tr id="menuRing_del">  <td><img src="http://img.etoos.com/Community/28_off.gif" style="cursor:hand;" onclick="javascript:actionFriend_del();" onmouseover="javascript:this.src='http://img.etoos.com/Community/28_on.gif'" onmouseout="javascript:this.src='http://img.etoos.com/Community/28_off.gif'"></td>  </tr>  <tr id="menuMsgSend">  <td><img src="http://img.etoos.com/Community/29_off.gif" style="cursor:hand;" onclick="javascript:actionMsgSend();" onmouseover="javascript:this.src='http://img.etoos.com/Community/29_on.gif'" onmouseout="javascript:this.src='http://img.etoos.com/Community/29_off.gif'"></td>  </tr></tbody></table><table width="136" border="0" cellspacing="0" cellpadding="0" id="entireMenuView" name="entireMenuView" style="display:none;position:absolute;">  <tbody><tr>  <td><img src="http://stage-img.etoos.com/Community/01_off.gif" style="cursor:hand;" onclick="javascript:entireMenuMain();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/01_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/01_off.gif'"></td>  </tr>  <tr>    <td><img src="http://stage-img.etoos.com/Community/02.gif" style="cursor:hand;"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/03_off.gif" style="cursor:hand;" onclick="javascript:entireMenuTeacher();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/03_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/03_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/04_off.gif" style="cursor:hand;" onclick="javascript:entireMenuSuneong();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/04_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/04_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/05_off.gif" style="cursor:hand;" onclick="javascript:entireMenuNaesin();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/05_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/05_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/06_off.gif" style="cursor:hand;" onclick="javascript:entireMenuUniv();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/06_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/06_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/07_off.gif" style="cursor:hand;" onclick="javascript:entireMenuIpsi();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/07_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/07_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/08_off.gif" style="cursor:hand;" onclick="javascript:entireMenuEPLUS();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/08_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/08_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/09_off.gif" style="cursor:hand;" onclick="javascript:entireMenuMyStudyRoom();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/09_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/09_off.gif'"></td>  </tr>  <tr>    <td><img src="http://stage-img.etoos.com/Community/02.gif" style="cursor:hand;"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/10_off.gif" style="cursor:hand;" onclick="javascript:entireMenuCommunity();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/10_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/10_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/11_off.gif" style="cursor:hand;" onclick="javascript:entireMenuRanking();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/11_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/11_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/12_off.gif" style="cursor:hand;" onclick="javascript:entireMenuKnowHow();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/12_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/12_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/13_off.gif" style="cursor:hand;" onclick="javascript:entireMenuBook();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/13_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/13_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/14_off.gif" style="cursor:hand;" onclick="javascript:entireMenuCustmer();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/14_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/14_off.gif'"></td>  </tr></tbody></table><table width="136" border="0" cellspacing="0" cellpadding="0" id="serviceMenuView" name="serviceMenuView" style="display:none;position:absolute;">  <tbody><tr>  <td><img src="http://stage-img.etoos.com/Community/01_off.gif" style="cursor:hand;" onclick="javascript:entireMenuMain();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/01_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/01_off.gif'"></td>  </tr>  <tr>    <td><img src="http://stage-img.etoos.com/Community/02.gif" style="cursor:hand;"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/10_off.gif" style="cursor:hand;" onclick="javascript:entireMenuCommunity();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/10_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/10_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/11_off.gif" style="cursor:hand;" onclick="javascript:entireMenuRanking();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/11_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/11_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/12_off.gif" style="cursor:hand;" onclick="javascript:entireMenuKnowHow();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/12_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/12_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/13_off.gif" style="cursor:hand;" onclick="javascript:entireMenuBook();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/13_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/13_off.gif'"></td>  </tr>  <tr>  <td><img src="http://stage-img.etoos.com/Community/14_off.gif" style="cursor:hand;" onclick="javascript:entireMenuCustmer();" onmouseover="javascript:this.src='http://stage-img.etoos.com/Community/14_on.gif'" onmouseout="javascript:this.src='http://stage-img.etoos.com/Community/14_off.gif'"></td>  </tr></tbody></table>
+
+
+<!--<LINK REL="StyleSheet" HREF="http://www.etoos.com/common/css/etoos.css" type="text/css">-->
+
+<div id="Fsub_wrap">
+	<div id="Fsub_header">
+
+
+
+<link rel="icon" href="http://stage-img.etoos.com/common/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://stage-img.etoos.com/common/favicon.ico" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=EUC-KR">
+
+<style>@media all { IE\:homePage {behavior:url(#default#homepage)}}</style>
+<ie:homepage id="oHomePage">
+<link rel="shortcuticon" href="http://stage-img.etoos.com/common/etoos.ico">
+<style type="text/css">
+
+	body {background:url(http://img.etoos.com/home/main2013/bg_head.gif) left top repeat-x;}
+	
+		#etoosT_lyon {top:100px;}
+		#csacade_lyon {top:44px;}
+	
+	#csacade_lyon .close  {text-align:right;}
+
+</style>
+
+<style type="text/css">
+/*#floater {position:absolute; padding-top:0px; margin-left:328px;}*/
+</style>
+
+<dl id="accessibility">
+	<dt><b>바로가기</b></dt>
+	<dd><a href="#gnb">메인메뉴 바로가기</a></dd>
+	<dd><a href="#contentW">본문내용 바로가기</a></dd>
+</dl>
+<hr>
+	<!-- 2013-03-13 New아이콘 추가 -->
+	<style type="text/css">
+		#snb .snb_mobile {position:relative;}
+		#snb .snb_mobile .icon_new {position:absolute;top:0;right:0;padding-right:6px;background-color:#fff}
+		#mobetoos #melist .app_met {position:relative}
+		#mobetoos #melist .app_met .icon_new {position:absolute;top:-5px;left:25px}
+	</style>
+
+<div id="headerW" style="border-bottom:1px solid #28ace1; height:131px; background:url(http://img.etoos.com/home/main2013/bg_header.gif) left top repeat-x; *zoom:1; z-index:10;">
+	<div id="header_w" style="z-index:100;">
+		<h1><a href="http://stage-web.etoos.com" onfocus="blur();"><img src="http://stage-img.etoos.com/home/main2013/Hetoos.gif" alt="ETOOS"></a></h1>
+		<div id="log_w">
+			<h2 class="blind">빠른링크</h2>
+			<ul id="quick">
+				<li><a href="javascript:;" onclick="fnH13_BOOKMARK();" onfocus="blur();"><img src="http://stage-img.etoos.com/home/main2013/Hquick_favorit.gif" alt="즐겨찾기"></a></li>
+				<!-- <li><a href="javascript:;" onClick="fnH13_DESKTOP_ICON();" onFocus="blur();"><img src="http://stage-img.etoos.com/home/main2013/Hquick_startetoos.gif" alt="바로가기" /></a></li> -->
+			</ul>
+			
+		<div id="login">
+			<h2 class="blind">로그인</h2>
+			<form id="loginForm" name="loginForm" method="post" action="https://www.etoos.com/member/login_sql.asp">
+				<input type="hidden" id="site_cd" name="site_cd" value="0001">
+				<input type="hidden" id="returnUrl" name="returnUrl" value="https://www.etoos.com/teacher/event/2013/10/kwwkj_31_test/Default.asp?">
+			<fieldset>
+				<legend>로그인</legend>
+				<div id="loginR">
+					<div class="userid">
+						<button type="button" id="account" class="idsel_btn" onclick="fnH13_LOGIN_SELECT_VIEW();" onfocus="blur();"><span id="spnH13_SITE_NM" name="spnH13_SITE_NM">ETOOS</span></button>
+						<ul id="ulID_SELECT" name="ulID_SELECT" class="idselOn" style="display:none;line-height:nomal;">
+							<li onclick="fnH13_LOGIN_SELECT_CLICK('0001');" onfocus="blur();" style="cursor:pointer;">ETOOS</li>
+							<li onclick="fnH13_LOGIN_SELECT_CLICK('0002');" onfocus="blur();" style="cursor:pointer;">Koreaedu</li>
+						</ul>
+						<label for="id" class="blind">아이디</label>
+						<input type="text" id="mem_id" name="mem_id" title="아이디 입력" onfocus="this.style.backgroundImage='';" style="background:#fff url(http://stage-img.etoos.com/home/main2013/bg_id.gif) 5px 50% no-repeat; width:58px;">
+					</div>
+					<p class="userpw"><label for="pw" class="blind">비밀번호</label> <input type="password" id="pwd" name="pwd" title="비밀번호 입력" onfocus="this.style.backgroundImage='';" style="background:#fff url(http://stage-img.etoos.com/home/main2013/bg_pass.gif) 5px 50% no-repeat;" onkeypress="if(event.keyCode==13) {fnH13_GO_LOGIN()}"></p>
+					<p class="idsave"><input type="checkbox" id="rememberID" name="rememberID" value="Y" title="아이디 저장"> <label for="rememberID">아이디저장</label></p>
+				</div>
+				<button type="button" title="로그인" class="logon_btn" onclick="fnH13_GO_LOGIN();"><span>로그인</span></button>
+				<div id="loginL">
+					<!-- <p class="join"><a href="https://stage-web.etoos.com/member/default.asp" onFocus="blur();" class="link">회원가입</a></p> -->
+					<p class="join"><a href="https://www.etoos.com/member/default.asp" onfocus="blur();" class="link">회원가입</a></p>
+					<p class="find"><a href="https://stage-web.etoos.com/member/search_info_new.asp" onfocus="blur();" class="link">아이디/비밀번호 찾기</a></p>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+		
+		<script language="JavaScript">
+		//<![CDATA[
+			if ("" == "1") {
+				document.loginForm.rememberID.checked = true;
+				document.loginForm.mem_id.value = "";
+				document.loginForm.mem_id.style.backgroundImage='';
+			}
+
+			function fnH13_GO_LOGIN() {
+				var strH13_MEM_ID; strH13_MEM_ID = document.loginForm.mem_id.value + "";
+				if (strH13_MEM_ID.length == 0 || strH13_MEM_ID=="아이디" || strH13_MEM_ID == "" ) {
+					alert("아이디를 입력해 주세요");
+					document.loginForm.mem_id.value = "";
+					document.loginForm.mem_id.focus();
+					return false;
+				} else if (document.loginForm.pwd.value.length == 0) {
+					alert("패스워드를 입력해 주세요");
+					document.loginForm.pwd.value = "";
+					document.loginForm.pwd.focus();
+					return false;
+				} else if (document.loginForm.pwd.value.length < 4) {
+					alert("패스워드를 4자리 이상 입력해 주세요");
+					document.loginForm.pwd.value = "";
+					document.loginForm.pwd.focus();
+					return false;
+				} else {
+					document.loginForm.submit();
+				}
+			}
+
+			function fnH13_LOGIN_SELECT_VIEW() {
+				if (eval("ulID_SELECT").style.display == "none") { eval("ulID_SELECT").style.display = "";
+				} else { eval("ulID_SELECT").style.display = "none"; }
+			}
+
+			function fnH13_LOGIN_SELECT_CLICK(selectStr) {
+				document.loginForm.site_cd.value = selectStr;
+
+				if (selectStr=="0001") { eval("spnH13_SITE_NM").innerHTML = "ETOOS"; }
+				else { eval("spnH13_SITE_NM").innerHTML = "Koreaedu"; }
+
+				eval("ulID_SELECT").style.display = "none";
+			}
+		//]]>
+		</script>
+		
+		</div>
+
+		<div id="gnb_w">
+			<h2 class="blind">이투스 주요서비스</h2>
+			<ul id="snb">
+				<li><a href="https://www.etoos.com/ECommunity/event/?ING_FLAG=I" class="snb_event" onfocus="blur();"><span class="ir">이벤트</span></a></li>
+				<li class="lineL"><a href="https://www.etoos.com/mobileIntro/MyStudyRoom.asp" class="snb_mobile"><span class="ir">모바일</span></a></li>
+				<li class="lineL"><a href="https://www.etoos.com/pmpPlus" class="snb_stms" onfocus="blur();"><span class="ir">학습기기</span></a></li>
+				<li class="lineL"><a href="https://www.etoos.com/customer" class="snb_csc" onfocus="blur();"><span class="ir">고객센터</span></a></li>
+				<li class="lineL"><a href="https://www.etoos.com/book" target="_blank" class="snb_book" onfocus="blur();"><span class="ir">이투스서점</span></a></li>
+			</ul>
+
+			<ul id="gnb">
+				<li><a href="https://www.etoos.com/mystudyroom" class="gnb_myroom" onfocus="blur();"><span class="ir">마이룸</span></a></li>
+				<li><a href="https://www.etoos.com/teacher" id="aH13_T" name="aH13_T" class="gnb_etoosT" onfocus="blur();"><span class="ir">이투스 선생님</span></a><span class="go"><a href="javascript:;" onclick="fnH13_T_SHOW();" class="link" onfocus="blur();"></a></span></li>
+				
+					<li><a href="https://www.etoos.com/lecture/default.asp?CHOICE_CD=0001" class="gnb_ppgo3n" onfocus="blur();"><span class="ir">예비 고3</span></a></li>
+					<li><a href="https://www.etoos.com/lecture/Default2014.asp?CHOICE_CD=0002" class="gnb_ppgo21" onfocus="blur();"><span class="ir">예비 고2.1</span></a></li>
+				
+				<li><a href="https://www.etoos.com/lecture/DefaultUniversity.asp?CHOICE_CD=0004" class="gnb_uvexam" onfocus="blur();"><span class="ir">대학별고사</span></a></li>
+				<li><a href="https://www.etoos.com/report" class="gnb_infocs" onfocus="blur();"><span class="ir">입시정보.컨설팅</span></a></li>
+			</ul>
+
+			<div id="divH13_T" name="divH13_T" style="display:none;"></div>
+
+			<div id="csacade" class="ppcsacade">
+				<h2 class="blind">청솔학원 안내 및 캠퍼스 바로가기</h2>
+				<a href="javascript:;" onclick="fnH13_C_SHOW();" id="aH13_C" name="aH13_C" class="csacade" onfocus="blur();"><span class="ir">청솔학원</span></a>
+
+				<div id="divH13_C" name="divH13_C" style="display:none;" onfocus="blur();">
+					<div id="csacade_lyon">
+						<h3><a href="javascript:;" onclick="fnH13_C_LINK('00');" onfocus="blur();">청솔학원 바로가기</a></h3>
+						<dl>
+							<dt>기숙학원 확장이전</dt>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('10');">하이퍼 양지이과 전문관 <img src="http://stage-img.etoos.com/home/main2013/ic_new.gif" alt="new" class="ico_new ico_newl"></a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('11');">하이퍼 양지문과 전문관 <img src="http://stage-img.etoos.com/home/main2013/ic_new.gif" alt="new" class="ico_new ico_newl"></a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('12');">이투스 프리미엄관 <img src="http://stage-img.etoos.com/home/main2013/ic_new.gif" alt="new" class="ico_new ico_newl"></a></dd>
+							<dt><a href="javascript:;" onclick="fnH13_C_LINK('00');" onfocus="blur();">직영 청솔학원</a></dt>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('01');" onfocus="blur();">강남 청솔학원</a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('09');" onfocus="blur();">강북 청솔학원</a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('02');" onfocus="blur();">분당 청솔학원</a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('03');" onfocus="blur();">평촌 청솔학원</a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('05');" onfocus="blur();">부천 청솔학원</a></dd>
+							<dd><a href="javascript:;" onclick="fnH13_C_LINK('06');" onfocus="blur();">일산 청솔학원</a></dd>
+						</dl>
+						<p class="close"><a href="javascript:;" onclick="fnH13_C_HIDE();" onfocus="blur();"><img src="http://stage-img.etoos.com/home/main2013/btn_close1.gif" alt="닫기"></a></p>
+						<span class="edge"></span>
+					</div>
+				</div>
+			</div>
+
+			<div id="etclk">
+				<h2 class="blind">이투스 기타 서비스 바로가기</h2>
+				<ul>
+					<li><a href="https://www.etoos.com/PremiumClass/2014/" onfocus="blur();" class="elk_prmclass"><span class="ir">프리미엄 클래스</span></a></li>
+					<li><a href="https://www.etoos.com/studyband/" target="_parent" on-click="fnH13_POP_STUDY_BAND();" onfocus="blur();" class="elk_bend "><span class="ir">고1,2 스터디밴드</span></a></li>
+				</ul>
+			</div>
+
+
+			<div id="search">
+				
+				<h2 class="blind">검색</h2>
+				<input type="text" id="txtKEYWORD" name="txtKEYWORD" size="30" title="검색" value="" onkeyup="fnH13_AUTO_KEYWORD();" onfocus="fnH13_KEYWORD_CLEAR();" autocomplete="off" maxlength="50">
+				<a href="javascript:;" onclick="fnH13_SEARCH_YN();" onfocus="blur();" class="autosch"><span>검색어 자동완성</span></a>
+				<button type="button" title="검색" class="search_btn" onclick="fnH13_SEACHER_DOC('');"><span>검색</span></button>
+
+				<div id="divH13_AUTO_KEYWORD" name="divH13_AUTO_KEYWORD"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script language="JavaScript">
+//<![CDATA[
+	var strSEARCH_PROMOTION_EVENT = "";
+	var strSEARCH_PROMOTION_EVENT_URL = "";
+//]]>
+</script>
+<script language="JavaScript" src="https://www.etoos.com/cache/common/menu/search_promotionN.js"></script>
+<script language="JavaScript">
+	
+	function fnHideSe(){
+		document.getElementById('search_img').style.display = "none";
+	}
+//<![CDATA[
+	var strH13_SEARCH_FOCUS_YN = "N";
+	var strH13_PRE_KEYWORD = "";
+	var strH13_AUTO_SEARCH_YN = getCookie("auto_search");
+	var intH13_ARROW_ONCLICK = 0;
+	var strHEADER_TEACHER_VIEW_YN = "N";
+	if (strH13_AUTO_SEARCH_YN == "") { strH13_AUTO_SEARCH_YN = "Y"; }
+
+	document.onclick = function() {
+		try {
+			if (intH13_ARROW_ONCLICK == 0) { Element.hide("divH13_AUTO_KEYWORD");
+			} else { intH13_ARROW_ONCLICK = 0; }
+		} catch(e) {}
+
+		try {
+			if (intHEADER_ID_SELECT_ONCLICK_2012 == 0) { document.loginForm.ulID_SELECT.className ="accOn"; /*$("ulID_SELECT").className = "accOn";*/
+			} else { intHEADER_ID_SELECT_ONCLICK_2012 = 0; }
+		} catch(e) {}
+	}
+
+	function fnH13_HOME_START() {
+		try { oHomePage.style.behavior='url(#default#homepage)'; oHomePage.setHomePage('http://stage-web.etoos.com'); } catch(err) { }
+	}
+
+	function fnH13_BOOKMARK() { window.external.AddFavorite("http://stage-web.etoos.com", "내가 앞서가는 힘, 이투스"); }
+
+	function fnH13_DESKTOP_ICON() {
+		if (confirm("바탕화면에 바로가기 아이콘을 만드시겠습니까?")) {
+			var WshShell = new ActiveXObject("WScript.Shell");
+			Desktoptemp = WshShell.Specialfolders("Desktop"); //path
+ 			var sIconNm = "ETOOS"; //바탕 화면에 생성될 아이콘 명.
+			var sName = WshShell.CreateShortcut(Desktoptemp + "\\" + sIconNm + ".URL");
+			sName.TargetPath = "http://www.etoos.co.kr";
+			sName.Save();
+		}
+	}
+
+	// strH13_SEARCH_FOCUS_YN 포커스 체크
+	if (strSEARCH_PROMOTION_EVENT == "") { strH13_SEARCH_FOCUS_YN = "Y"; }
+	
+
+	function fnH13_SEACHER_DOC(str) {
+		if (str != "") { $("txtKEYWORD").value = str; }
+
+		if (strH13_SEARCH_FOCUS_YN == "N") {
+			location.href = strSEARCH_PROMOTION_EVENT_URL;
+		} else if ($F("txtKEYWORD") == "") {
+			alert("검색어를 입력해주세요."); document.all.txtKEYWORD.focus(); return;
+		} else {
+			location.href = "http://stage-search.etoos.com/common_search/menu/search.asp?PAGE_MODE=total&KEYWORD=" + escape($F("txtKEYWORD"));
+		}
+	}
+
+	function fnH13_KEYWORD_CLEAR() {
+	
+		if (strH13_SEARCH_FOCUS_YN == "N") { $("txtKEYWORD").value = ""; strH13_SEARCH_FOCUS_YN = "Y"; }
+	
+	}
+
+	function fnH13_AUTO_KEYWORD() {
+		if (window.event.keyCode == 13) { //Enter
+			fnH13_SEACHER_DOC('');
+		} else {
+			var strHEADER_KEYWORD = "";
+			strHEADER_KEYWORD = $F("txtKEYWORD");
+			if (strH13_PRE_KEYWORD != strHEADER_KEYWORD) {
+				if (strHEADER_KEYWORD != "" && strH13_AUTO_SEARCH_YN == "Y") {
+					loadAjaxSelectBoxChange('divH13_AUTO_KEYWORD', 'https://www.etoos.com/common/menu/proxy_2013.asp?auto_search='+strH13_AUTO_SEARCH_YN+'&txtkeyword='+escape(strHEADER_KEYWORD), '');
+				}
+				strH13_PRE_KEYWORD = strHEADER_KEYWORD;
+				if ($("divH13_AUTO_KEYWORD").innerHTML == "") {
+					fnH13_SEARCH_ARROW("N", strH13_AUTO_SEARCH_YN);
+					Element.hide("divH13_AUTO_KEYWORD");
+				} else {
+					fnH13_SEARCH_ARROW("Y", strH13_AUTO_SEARCH_YN);
+					//at_show_aux("txtKEYWORD", "divH13_AUTO_KEYWORD", "y");
+					if (strH13_AUTO_SEARCH_YN == "Y") { $("divH13_AUTO_KEYWORD").style.display = "block"; }
+				}
+			}
+
+			if (strHEADER_KEYWORD == "") {
+				fnH13_SEARCH_ARROW("N", strH13_AUTO_SEARCH_YN);
+				Element.hide("divH13_AUTO_KEYWORD");
+			}
+		}
+		Field.focus("txtKEYWORD");
+	}
+
+	function fnH13_AUTO_SEARCH_YN(search_yn) {
+		document.cookie = "auto_search=" + escape(search_yn) + "; path=/;"
+		strH13_AUTO_SEARCH_YN = search_yn;
+		loadAjaxSelectBoxChange('divH13_AUTO_KEYWORD', 'https://www.etoos.com/common/menu/proxy_2013.asp?auto_search='+strH13_AUTO_SEARCH_YN+'&txtkeyword='+escape($F("txtKEYWORD")), '');
+		fnH13_SEARCH_ARROW("Y", strH13_AUTO_SEARCH_YN);
+	}
+
+	function fnH13_SEARCH_ARROW(arrow_yn, arrow_dis_yn) {
+		/*if (arrow_yn == "Y" && arrow_dis_yn == "N") {
+			document.getElementById("imgHEADER_ARROW").src = "http://stage-img.etoos.com/home/main2012/ar2.gif";
+		} else if (arrow_yn == "Y" && arrow_dis_yn == "Y") {
+			document.getElementById("imgHEADER_ARROW").src = "http://stage-img.etoos.com/home/main2012/ar1.gif";
+		} else if (arrow_yn == "N" && arrow_dis_yn == "N") {
+			document.getElementById("imgHEADER_ARROW").src = "http://stage-img.etoos.com/home/main2012/ar1.gif";
+		} else if (arrow_yn == "N" && arrow_dis_yn == "Y") {
+			document.getElementById("imgHEADER_ARROW").src = "http://stage-img.etoos.com/home/main2012/ar2.gif";
+		}*/
+	}
+
+	function fnH13_SEARCH_YN() {
+		fnH13_SEARCH_ARROW("Y", strH13_AUTO_SEARCH_YN);
+		loadAjaxSelectBoxChange('divH13_AUTO_KEYWORD', 'https://www.etoos.com/common/menu/proxy_2013.asp?auto_search='+strH13_AUTO_SEARCH_YN+'&txtkeyword=&search_ext=Y', '');
+		intH13_ARROW_ONCLICK = 1;
+		if ($("divH13_AUTO_KEYWORD").style.display == "block") { Element.hide("divH13_AUTO_KEYWORD");
+		} else { $("divH13_AUTO_KEYWORD").style.display = "block"; }
+	}
+
+	fnH13_SEARCH_ARROW("N", strH13_AUTO_SEARCH_YN);
+	
+		try { $("txtKEYWORD").value = strSEARCH_PROMOTION_EVENT; } catch(e) {}
+	
+
+	var strH13_T_YN = "N";
+	function fnH13_T_SHOW() {
+		if (strH13_T_YN == "N") { loadAjaxTeacherList('divH13_T', 'https://www.etoos.com/common/menu/_layer_teacher_list_2013.asp', ''); }
+		aH13_T.className = "gnb_etoosT_on";
+		document.getElementById("divH13_T").style.display = "block";
+		strH13_T_YN = "Y"
+
+	}
+	function fnH13_T_HIDE() { aH13_T.className = "gnb_etoosT"; jQuery('#divH13_T').hide(); }
+
+	function fnH13_C_SHOW() { aH13_C.className = "csacade_on"; document.getElementById("divH13_C").style.display = "block"; }
+	function fnH13_C_HIDE() { aH13_C.className = "csacade"; document.getElementById("divH13_C").style.display = "none"; }
+
+	function fnH13_C_LINK(cmd) {
+		var strH13_C_URL = ""
+		switch(cmd) {
+			case "00" : strH13_C_URL = "http://www.cheongsol.co.kr"; break;
+			case "01" : strH13_C_URL = "http://gangnam.cheongsol.co.kr/senior/"; break;
+			case "02" : strH13_C_URL = "http://bundang.cheongsol.co.kr/senior/"; break;
+			case "03" : strH13_C_URL = "http://pyeongchon.cheongsol.co.kr/senior/"; break;
+			case "04" : strH13_C_URL = "http://nowon.cheongsol.co.kr/senior/"; break;
+			case "05" : strH13_C_URL = "http://bucheon.cheongsol.co.kr/senior/"; break;
+			case "06" : strH13_C_URL = "http://ilsan.cheongsol.co.kr/senior/"; break;
+			case "07" : strH13_C_URL = "http://bibong.cheongsol.co.kr/hpcs/senior/index.do"; break;
+			case "08" : strH13_C_URL = "http://yangpyung.cheongsol.co.kr/hpcs/senior/index.do"; break;
+			case "09" : strH13_C_URL = "http://gangbuk.cheongsol.co.kr/index.do "; break;
+
+			case "10" : strH13_C_URL = "http://yangji1.cheongsol.co.kr"; break;
+			case "11" : strH13_C_URL = "http://yangpyung.cheongsol.co.kr"; break;
+			case "12" : strH13_C_URL = "http://etoos.cheongsol.co.kr"; break;
+		}
+		if (cmd == "11") {
+			if (confirm("하이퍼 양지문과 전문관은 추후 오픈예정입니다.\n기존 양평청솔학원 홈페이지로 이동하시려면 확인 버튼을 클릭해주세요.")) {
+				if (strH13_C_URL!="") { window.open(strH13_C_URL,'','scrollbars=yes,width=1100,height=800,resizable=yes,toolbar=yes,menubar=yes,location=yes'); }
+			}
+		} else {
+			if (strH13_C_URL!="") { window.open(strH13_C_URL,'','scrollbars=yes,width=1100,height=800,resizable=yes,toolbar=yes,menubar=yes,location=yes'); }
+		}
+		fnH13_C_HIDE();
+	}
+
+	function fnH13_POP_STUDY_BAND() {
+		//window.open("https://www.etoos.com/home/popup/popup_20130214.asp",'','scrollbars=no,width=510,height=720,resizable=no,toolbar=no,menubar=no,location=no');
+		//window.open("https://www.etoos.com/StudyBand/event/2013/03/teaser_22/", "fullscreen", 'top=0,left=0,width='+(screen.availWidth-10)+',height='+(screen.availHeight-18)+',scrollbars=YES,fullscreen=yes,toobar=0,location=0,directories=0,status=0,menubar=0,resizable=1');
+		location.href= "https://www.etoos.com/studyband/";
+	}
+//]]>
+
+</script>
+
+
+<!--div id="freeHeaderBanner" style="width:990px;margin:0 auto;height:70px; margin-top:-10px;">
+	<table width="990" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="http://img.etoos.com/lecture/promotion/2013/10/allpass/maingnb_d0.gif" usemap="#mainbng" border="0"></td>
+      </tr>
+    </table>
+</div>
+
+<map name="mainbng">
+	<area shape="rect" coords="1,2,380,58" href="/Lecture/promotion/2013/10/allpass/" alt="국영수">
+	<area shape="rect" coords="612,2,991,58" href="/Lecture/promotion/2013/09/tamgu_freepass/" alt="사과탐">
+</map-->
+
+
+
+
+<!-- EBS 기획전 --><!--
+<div id="EBS_PRO_Banner" style="width:990px;margin:0 auto; height:60px;margin-top:-10px;margin-bottom:10px;">
+<img src="http://img.etoos.com/lecture/promotion/2013/04/tamgu_freepass/maingnb_0502_0.jpg" usemap="#MapHeader0418" border="0">
+
+<map name="MapHeader0418">
+	<area shape="rect" coords="1,3,398,57" href="https://www.etoos.com/lecture/promotion/2013/03/big35/">
+	<area shape="rect" coords="592,3,989,57" href="https://www.etoos.com/lecture/promotion/2013/03/ebs_promotion/" alt="EBS ETOOS">
+	<area shape="rect" coords="1,3,398,57" href="https://www.etoos.com/lecture/promotion/2013/02/big35/">
+</map>
+</div> -->
+<!-- EBS 기획전 -->
+</ie:homepage></div>
+
+	<div id="Fsub_conbody">
+
+
+
+
+
+<style>
+#Fsub_conbody {background:url('image/bg.png');padding:50px}
+.accordion {position:relative;overflow:hidden;width:1200px;margin:0px auto;list-style:none;padding:0px;background:url('image/bg.png')}
+.accordion .panel {position:absolute;overflow:hidden;border-left:1px solid #5A6264;background-repeat:no-repeat;background-position:center center;}
+.accordion .preloader {background:url('images/bg/preloader2.gif') no-repeat;width:62px;height:14px;position:absolute;z-index:15;}
+.accordion .caption {overflow:hidden;position:absolute;z-index:20;width:100%;height:100%;top:0;left:0}
+.accordion .caption .caption-background {background:url('image/bg.png');position:absolute;width:100%;height:100%;}
+.accordion .caption p {margin:0;background:url('image/light.png') 50% 0 no-repeat;}
+.accordion .caption .gph {position:absolute;right:24px;top:147px;}
+.accordion .caption .bar {position:absolute;left:205px;bottom:103px}
+.accordion .flo_cont {position:absolute;z-index:40;left:0;top:0;width:100%;height:100%}
+.accordion .flo_cont .btn_home {position:absolute;left:0;top:290px;}
+.accordion .flo_cont .txt {position:absolute;right:20px;top:40px;}
+.accordion .flo_cont .btn {position:absolute;right:15px;bottom:0;}
+.accordion .flo_cont_bot {position:absolute;z-index:10;left:0;top:0;width:100%;height:100%}
+.accordion .flo_cont_bot .gph {position:absolute;right:23px;top:147px;}
+.accordion .flo_cont_bot .bar {position:absolute;right:124px;bottom:103px}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.gridAccordion.js"></script>
+<script type="text/javascript">
+var J$ = jQuery.noConflict();
+J$(document).ready(function($) {
+	J$('.accordion').gridAccordion({
+		width: 1200,
+		height: 460,
+		columns: 4,
+		distance: 0,
+		closedPanelWidth: 10,
+		closedPanelHeight: 10,
+		alignType: 'leftBottom',
+		slideshow: true,
+		panelProperties: {
+			0 : {
+				captionWidth: 341,
+				captionHeight: 460,
+				captionTop: 0,
+				captionLeft: 0
+			},
+			1 : {
+				captionWidth: 341,
+				captionHeight: 460,
+				captionTop: 0,
+				captionLeft: 0
+			},
+			2 : {
+				captionWidth: 341,
+				captionHeight: 460,
+				captionTop: 0,
+				captionLeft: 0
+			},
+			3 : {
+				captionWidth: 341,
+				captionHeight: 460,
+				captionTop: 0,
+				captionLeft: 0
+			}
+		}
+	});
+});
+	
+</script>
+
+<ul class="accordion">
+	<li>
+		<img src="image/bkb_s.png" alt="">
+		<div class="caption">
+			<img src="image/bkb_b.png" alt="BKB 선생님"><img src="image/bkb_gph.png" alt="그래프" class="gph"><img src="image/gph_end.gif" width="11" height="178" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont_bot">
+			<img src="image/bkb_gph.png" alt="그래프" class="gph">
+			<img src="image/gph_end.gif" width="11" height="178" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont">
+			<img src="image/bkb_txt.png" alt="물리 1위 BKB 선생님" class="txt">
+			<div class="btn"><a href="#"><img src="image/bkb_btn.png" alt="무료 사전예약"></a></div>
+		</div>
+	</li>
+	<li> 
+		<img src="image/bid_s.png" alt="">
+		<div class="caption">
+			<img src="image/bid_b.png" alt="백인덕 선생님"><img src="image/bid_gph.png" alt="그래프" class="gph"><img src="image/gph_end.gif" width="11" height="186" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont_bot">
+			<img src="image/bid_gph.png" alt="그래프" class="gph">
+			<img src="image/gph_end.gif" width="11" height="186" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont">
+			<a href="#" class="btn_home"><img src="image/btn_home.png" alt="선생님홈"></a>
+			<img src="image/bid_txt.png" alt="화학 독보적 1위 백인덕 선생님" class="txt">
+			<div class="btn"><a href="#"><img src="image/bid_btn.png" alt="무료강좌+교재 신청하기"></a></div>
+		</div>
+	</li>
+	<li> 
+		<img src="image/bh_s.png" alt="">
+		<div class="caption">
+			<img src="image/bh_b.png" alt="백호 선생님"><img src="image/bh_gph.png" alt="그래프" class="gph"><img src="image/gph_end.gif" width="11" height="178" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont_bot">
+			<img src="image/bh_gph.png" alt="그래프" class="gph">
+			<img src="image/gph_end.gif" width="11" height="178" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont">
+			<a href="#" class="btn_home"><img src="image/btn_home.png" alt="선생님홈"></a>
+			<img src="image/bh_txt.png" alt="생명과학 독보적 1위 백호 선생님" class="txt">
+			<div class="btn"><a href="#"><img src="image/bh_btn1.png" alt="생명과학Ⅰ 무료강좌+교재 신청하기"></a><a href="#"><img src="image/bh_btn2.png" alt="생명과학Ⅱ 무료강좌+교재 신청하기"></a></div>
+		</div>
+	</li>
+	<li>
+		<img src="image/ogh_s.png" alt="">
+		<div class="caption"><img src="image/ogh_b.png" alt="오지훈 선생님"><img src="image/ogh_gph.png" alt="그래프" class="gph"><img src="image/gph_end.gif" width="11" height="166" alt="그래프" class="bar"></div>
+		<div class="flo_cont_bot">
+			<img src="image/ogh_gph.png" alt="그래프" class="gph">
+			<img src="image/gph_end.gif" width="11" height="166" alt="그래프바" class="bar">
+		</div>
+		<div class="flo_cont">
+			<a href="#" class="btn_home"><img src="image/btn_home.png" alt="선생님홈"></a>
+			<img src="image/ogh_txt.png" alt="지구과학 독보적 1위 오지훈 선생님" class="txt">
+			<div class="btn"><a href="#"><img src="image/ogh_btn1.png" alt="지구과학Ⅰ 무료강좌+교재 신청하기"></a><a href="#"><img src="image/ogh_btn2.png" alt="지구과학Ⅱ 무료강좌+교재 신청하기"></a></div>
+		</div>
+	</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	
+	<div id="Fsub_footer">
+<script language="JavaScript">
+//<![CDATA[
+	
+
+	function fnCloseLayer(vIdx) {
+		var vId = document.getElementById("divMpFlotingLayer" + vIdx);
+		if (vId.style.display == "block") { vId.style.display = "none"; }
+	}
+//]]>
+</script>
+
+
+<div id="footerW">
+	<div id="footer_menu">
+		<h2 class="blind">이투스 소개 및 약관</h2>
+		<ul id="footlist">
+			<li><a href="https://www.etoos.com/company/default.asp"><img src="http://stage-img.etoos.com/home/main2013/Finfo.png" alt="회사소개"></a></li>
+			<li><a href="https://www.etoos.com/company/new_teacher/"><img src="http://stage-img.etoos.com/home/main2013/Frecur.png" alt="강사모집"></a></li>
+			<li><a href="https://www.etoos.com/company/Recruit.asp"><img src="http://stage-img.etoos.com/home/main2013/Frecruit.png" alt="인재채용"></a></li>
+			<li><a href="https://www.etoos.com/company/new.asp"><img src="http://stage-img.etoos.com/home/main2013/Fpds.png" alt="보도자료"></a></li>
+			<li><a href="https://www.etoos.com/company/join_hands.asp"><img src="http://stage-img.etoos.com/home/main2013/Fpropose.png" alt="제휴문의"></a></li>
+			<li><a href="https://www.etoos.com/Company/Movie/"><img src="http://stage-img.etoos.com/home/main2013/Fmovie.png" alt="동영상 강의 제작"></a></li>
+			<li><a href="https://www.etoos.com/company/map.asp"><img src="http://stage-img.etoos.com/home/main2013/Fmap.png" alt="찾아오시는 길"></a></li>
+			<li><a href="https://www.etoos.com/member/yakkwan_new.asp"><img src="http://stage-img.etoos.com/home/main2013/Fpolicy.png" alt="이용약관"></a></li>
+			<li><a href="https://www.etoos.com/customer/BlueCenter/"><img src="http://stage-img.etoos.com/home/main2013/Fbluecenter.png" alt="부정사용자단속 블루센터"></a></li>
+			<li><a href="https://www.etoos.com/member/individual_new.asp"><img src="http://stage-img.etoos.com/home/main2013/Fprotect.png" alt="개인정보 취급방침"></a></li>
+			<li><a href="https://www.etoos.com/company/sitemap.asp"><img src="http://stage-img.etoos.com/home/main2013/Fsitemap.png" alt="사이트맵"></a></li>
+		</ul>
+		<label for="famsit" class="blind">패밀리 사이트</label>
+		<select id="sltFOOTER13_FAMILY_SITE" name="sltFOOTER13_FAMILY_SITE" onchange="if(this.value!=''){ window.open(this.value); }">
+			<option value="">패밀리 사이트</option>
+			<option value="http://www.cheongsol.co.kr/">청솔학원</option>
+			<option value="http://www.etoos.com/book/">이투스서점</option>
+			<option value="http://www.etoos.com/book/brand/nude.asp">누드교과서</option>
+		</select>
+	</div>
+	<div id="footer_adrs">
+		<a href="http://stage-web.etoos.com" class="Flogo"><img src="http://stage-img.etoos.com/home/main2013/Fetoos.png" alt="etoos" title="/118.221.123.29/"></a>
+		<p class="Finfo">이투스교육 주식회사 서울시 강남구 봉은사로 434 (삼성동 113-8) Fax 02:6442-7637 고객센터 1599-6405<br>사업자등록번호:220-85-32141  통신판매업신고:제 2011-서울강남-01629호&nbsp;&nbsp;&nbsp;대표이사: 김형중<br>개인정보관리책임자:정성호 1599-6405<br></p>
+		<address>Copyright ⓒ ETOOS Allright reserved <span class="mail"><a href="mailto:etoos@etoos.com">etoos@etoos.com</a></span></address>
+		<p class="withcon1"><img src="http://stage-img.etoos.com/home/main2013/Faward.png" alt="2009 대한민국 교육경영대상"></p>
+		<p class="withcon2"><img src="http://stage-img.etoos.com/home/main2013/Fdc.png" alt="DC표시 우수사이트"></p>
+		<p class="withcon3"><a href="javascript:;" onclick="getElementById('divLGU').style.display='';"><img src="http://stage-img.etoos.com/home/main2013/Fescrow.png" alt="LG U+ e-SCROW"></a></p>
+
+		<div id="divLGU" style="position:absolute;display:none;z-index:999;top:-160px;left:740px;">
+			<img src="http://stage-img.etoos.com/home/footer_escrow_pop.jpg" title=".29" onmouseout="document.getElementById('divLGU').style.display='none';" onclick="document.getElementById('divLGU').style.display='none';void(0);">
+		</div>
+	</div>
+</div>
+
+
+<!-- START OF MAIN CACHE UPDATE SCRIPT -->
+<iframe name="cache_iframe_footer" id="cache_iframe_footer" width="0" height="0" src="" border="0" frameborder="0" scrolling="no"></iframe>
+<script language="javascript" src="https://www.etoos.com/cache/home/main2011/challenge_etoos_array.js"></script>
+<script language="javascript">
+<!--
+
+if( typeof(challengeEtoosArray) === 'object' ) {
+	var docu_locate = window.document.location;
+	var docu_locate_href = window.document.location.href;
+	var docu_locate_path = window.document.location.pathname;
+	var docu_locate_query = window.document.location.search;
+	//docu_locate = docu_locate.toLowerCase()
+	docu_locate_href = docu_locate_href.toLowerCase()
+	docu_locate_path = docu_locate_path.toLowerCase()
+	docu_locate_query = docu_locate_query.toLowerCase()
+
+	var challengeEtoosArray_length = challengeEtoosArray.length;
+	var cache_iframe_footer_src = null, hctUrl=null, hctUrlQuery=null;
+	//window.alert(docu_locate +'\n'+docu_locate_href +'\n'+docu_locate_path +'\n'+docu_locate_query +'\n'+challengeEtoosArray_length);
+	for(var ii=0 ; ii<challengeEtoosArray_length ; ii++){
+		hctUrlChecker = false;
+		hctUrl = challengeEtoosArray[ii][3];
+		if( hctUrl ) hctUrl = hctUrl.toLowerCase()
+		//hctUrl = hctUrl.replace('www','stage-web');
+		hctUrlQuery = ( hctUrl.indexOf('?') > 0 ? hctUrl.substring(hctUrl.indexOf('?'),hctUrl.length) : null );
+
+		hctUrl2 = ( hctUrl.indexOf('?') > 0 ? hctUrl.substring(0, hctUrl.indexOf('?')) : hctUrl );
+		docu_locate_href2 = ( docu_locate_href.indexOf('?') > 0 ? docu_locate_href.substring(0, docu_locate_href.indexOf('?')) : docu_locate_href );
+
+		//if( hctUrl.indexOf(docu_locate_path)>=0 || (hctUrl+'default.asp').indexOf(docu_locate_path)>=0 ){
+		if( hctUrl == docu_locate_href || hctUrl2 == docu_locate_href2 ){
+//			
+
+			if( hctUrlQuery != null && hctUrlQuery.length>1 && ( docu_locate_query && docu_locate_query.length>1 ) ) {
+				if( hctUrlQuery.indexOf(docu_locate_query)>=0 ){
+					hctUrlChecker = true;
+				}
+			} else {hctUrlChecker = true;}
+			//window.alert(hctUrl+'\n'+hctUrlQuery+'\n'+docu_locate_path+'\n'+docu_locate_query+'\n'+hctUrlChecker);
+			if( hctUrlChecker ) {
+				cache_iframe_footer_src = '/gw_home.asp?s=0&d=' + challengeEtoosArray[ii][0];
+				cache_iframe_footer_src = cache_iframe_footer_src + '&m=' + challengeEtoosArray[ii][1];
+				cache_iframe_footer_src = cache_iframe_footer_src + '&k=' + challengeEtoosArray[ii][2];
+				cache_iframe_footer_src = cache_iframe_footer_src + '&q=' + challengeEtoosArray[ii][3];
+				cache_iframe_footer_src = cache_iframe_footer_src + '&c=' + "";
+				var cache_iframe_footer = document.getElementById('cache_iframe_footer');
+				//var cache_iframe_footer = document.createElement('iframe');
+				//cache_iframe_footer.id = 'cache_iframe_footer';
+				//cache_iframe_footer.src = cache_iframe_footer_src;
+				cache_iframe_footer.width="0";
+				cache_iframe_footer.height="0";
+				//document.body.appendChild(cache_iframe_footer);
+			}
+		}
+	}
+	if( cache_iframe_footer_src ) {
+		var cache_iframe_footer = document.getElementById('cache_iframe_footer');
+		if( cache_iframe_footer ) {
+			cache_iframe_footer.contentWindow.location.replace(cache_iframe_footer_src);
+		}
+	}
+}
+//-->
+</script>
+<!-- END OF MAIN CACHE UPDATE SCRIPT -->
+
+	<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"> </script>
+	<script type="text/javascript">
+	if (!wcs_add) var wcs_add={};
+	wcs_add["wa"] = "s_49cb6a4646a9";
+	if (!_nasa) var _nasa={};
+	wcs.inflow("etoos.com");
+	wcs_do(_nasa);
+	</script>
+	</div>
+	
+</div>
+
+<div id="html-validator-loading" style="display: none;"><img src="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/images/loading.gif ">Validating...</div><div id="html-validator-message"><span id="html-validation-message-close">X</span><div id="html-validator-message-content"></div></div></body></html>
