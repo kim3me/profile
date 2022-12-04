@@ -173,7 +173,7 @@ h3 {font-size: 15px;}
 .tit_section {margin-top:30px;font-size: 18px;color:#222}
 .tit_section::before {display: inline-block;margin:0 5px 0 0;content: '';width: 4px;height: 15px;background-color: #ff6600;vertical-align: middle}
 .tit_section .refer {font-size: 11px;color:#333;font-weight: 300;}
-.wr_section {margin:20px 0 0 10px;}
+.wr_section {margin:20px 0 0 10px;font-size: 13px;}
 
 .wrap_profile .wr_name {width:100px;padding:20px 0 20px 10px;}
 .wrap_profile .wr_name .name {font-size:30px; color:#222}
