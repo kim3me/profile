@@ -1,11 +1,11 @@
 /* font-face  */
-@font-face { font-family: 'NBGothic'; src: url('../fonts/NanumBarunGothicUltraLight.ttf') format('woff'); font-weight: 200; }
+@font-face { font-family: 'NBGothic'; src: url('https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothicL/NanumBarunGothicWebUltraLight.woff') format('woff'); font-weight: 200; }
 
-@font-face { font-family: 'NBGothic'; src: url('../fonts/NanumBarunGothicLight.ttf') format('woff'); font-weight: 300; }
+@font-face { font-family: 'NBGothic'; src: url('https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.woff') format('woff'); font-weight: 300; }
 
-@font-face { font-family: 'NBGothic'; src: url('../fonts/NanumBarunGothic.ttf') format('woff'); font-weight: 400; }
+@font-face { font-family: 'NBGothic'; src: url('https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.woff') format('woff'); font-weight: 400; }
 
-@font-face { font-family: 'NBGothic'; src: url('../fonts/NanumBarunGothicBold.ttf') format('woff'); font-weight: bold; }
+@font-face { font-family: 'NBGothic'; src: url('https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWebBold.woff') format('woff'); font-weight: bold; }
 
 /* reset */
 body,
