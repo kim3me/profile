@@ -128,7 +128,7 @@ img {
 /* reset */
 body {
   height: 100%;
-  padding: 30px 25px;
+  padding: 30px 15px;
   background: #fff;
   box-sizing: border-box;
 }
@@ -169,12 +169,12 @@ div::-webkit-scrollbar-thumb {
 .tit_section {margin-top:30px;font-size: 18px;color:#222}
 .tit_section::before {display: inline-block;margin:5px 5px 0 0;content: '';width: 4px;height: 15px;background-color: #ff6600;vertical-align: top}
 .tit_section .refer {font-size: 11px;color:#333;font-weight: 300;}
-.wr_section {margin:20px 0 0 15px;}
+.wr_section {margin:20px 0 0 10px;}
 
-.wrap_profile .wr_name {width:100px;padding:20px 0 20px 20px;}
+.wrap_profile .wr_name {width:100px;padding:20px 0 20px 10px;}
 .wrap_profile .wr_name .name {font-size:30px; color:#222}
 .wrap_profile .wr_name .job {font-size: 18px;color:#008c91}
-.wrap_profile .wr_info {width:auto;padding:0 20px;}
+.wrap_profile .wr_info {width:auto;padding:0 10px;}
 .wrap_profile .wr_info .info {margin:3px 0}
 .wrap_profile .wr_info .info dt {display: inline-block;width:60px;font-size: 15px;font-weight: bold;color:#222}
 .wrap_profile .wr_info .info dd {display: inline-block;}
@@ -192,6 +192,8 @@ div::-webkit-scrollbar-thumb {
 .wrap_career .info.project dt {vertical-align: top}
 .wrap_career .info.project dd {vertical-align: top;margin-top:2px;}
 .wrap_career .text_indent {display: flex;align-items: flex-start;column-gap: 4px;margin-bottom:10px}
+
+.wrap_career .info.project dd .text_indent:last-child {margin-bottom:0}
 .wrap_career .text_indent strong {white-space: nowrap;}
 
 .wrap_etc .tit {font-size: 15px;font-weight: bold;color:#222}
