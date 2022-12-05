@@ -169,13 +169,11 @@ div::-webkit-scrollbar-thumb {
 }
 
 
-.tit_section {margin-top:30px;font-size: 1.5em;color:#222}
+.tit_section {display: block;margin-top:30px;font-size: 1.5em;color:#222}
 .tit_section::before {display: inline-block;margin:0 5px 0 0;content: '';width: 4px;height: 15px;background-color: #ff6600;vertical-align: middle}
 .tit_section .refer {font-size: 0.4em;color:#333;font-weight: 300;}
 .wr_section {margin:20px 0 0 10px}
 
-.wrap_etc .info dt {display: inline-block;margin-right: 10px;font-size: 1.2em;font-weight: bold;color:#222;vertical-align: middle}
-.wrap_etc .info dd {display: inline-block;vertical-align: middle;}
 
 .wrap_profile .wr_name {width:100px;padding:20px 0 20px 10px;}
 .wrap_profile .wr_name .name {font-size:2.5em; color:#222}
@@ -202,7 +200,8 @@ div::-webkit-scrollbar-thumb {
 .wrap_career .info.project dd .text_indent:last-child {margin-bottom:0}
 .wrap_career .text_indent strong {white-space: nowrap;}
 
-.wrap_etc .tit {font-size: 1.2em;font-weight: bold;color:#222}
+.wrap_etc .tit {display: block;font-size: 1.2em;font-weight: bold;color:#222}
+.wrap_etc p {display: block;}
 
 .wrap_portfolio .list_portfolio li {display: inline-block;margin:5px 3px;}
 .wrap_portfolio .list_portfolio li a {display: inline-block;padding:3px 7px; border-radius:2px;background-color: #999;color: #fff;}
