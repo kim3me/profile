@@ -127,6 +127,7 @@ img {
 
 /* reset */
 body {
+  overflow: hidden;
   height: 100%;
   padding: 0;
   background: #fff;
