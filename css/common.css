@@ -174,6 +174,9 @@ div::-webkit-scrollbar-thumb {
 .tit_section .refer {font-size: 0.4em;color:#333;font-weight: 300;}
 .wr_section {margin:20px 0 0 10px}
 
+.wrap_etc .info dt {display: inline-block;margin-right: 10px;font-size: 1.2em;font-weight: bold;color:#222;vertical-align: middle}
+.wrap_etc .info dd {display: inline-block;vertical-align: middle;}
+
 .wrap_profile .wr_name {width:100px;padding:20px 0 20px 10px;}
 .wrap_profile .wr_name .name {font-size:2.5em; color:#222}
 .wrap_profile .wr_name .job {font-size:1.5em;color:#008c91}
