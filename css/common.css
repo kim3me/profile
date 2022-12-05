@@ -8,53 +8,92 @@
 @font-face { font-family: 'NBGothic'; src: url('https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWebBold.woff') format('woff'); font-weight: bold; }
 
 /* reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 13px;
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0
+}
+
+fieldset,
+img,
+iframe {
+  border: 0 none
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 13px;
   letter-spacing: -0.02em;
   line-height: 1.5;
   font-family:'NBGothic', sans-serif;
   font-weight: 400;
-  color: #555;
-	vertical-align: baseline;
+  color: #555
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 a {
   color: #222;
   text-decoration: none
@@ -64,6 +103,26 @@ a:active,
 a:hover {
   color: #222;
   text-decoration: none
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal
+}
+
+table {
+  position: relative;
+  width: 100%
+}
+
+img {
+  vertical-align: top
 }
 
 /* reset */
@@ -93,9 +152,9 @@ div::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: #c2c2c4
 }
-h1 {font-size:30px;font-weight: bold;}
-h2 {font-size: 18px;font-weight: bold;}
-h3 {font-size: 15px;font-weight: bold;}
+h1 {font-size:30px;}
+h2 {font-size: 18px;}
+h3 {font-size: 15px;}
 
 
 #wrapCont {max-width:800px;min-width:280px;margin:0 auto;font-size: 13px;}
@@ -115,6 +174,7 @@ h3 {font-size: 15px;font-weight: bold;}
 .tit_section::before {display: inline-block;margin:0 5px 0 0;content: '';width: 4px;height: 15px;background-color: #ff6600;vertical-align: middle}
 .tit_section .refer {font-size: 11px;color:#333;font-weight: 300;}
 .wr_section {margin:20px 0 0 10px;font-size: 13px;}
+.wr_section p {font-size: 13px;}
 
 .wrap_profile .wr_name {width:100px;padding:20px 0 20px 10px;}
 .wrap_profile .wr_name .name {font-size:30px; color:#222}
