@@ -128,7 +128,7 @@ img {
 /* reset */
 body {
   height: 100%;
-  padding: 30px 15px;
+  padding: 0;
   background: #fff;
   box-sizing: border-box;
 }
@@ -157,7 +157,7 @@ h2 {font-size: 18px;}
 h3 {font-size: 15px;}
 
 
-#wrapCont {max-width:800px;min-width:280px;margin:0 auto;font-size: 13px;}
+#wrapCont {max-width:800px;min-width:280px;padding:30px 15px;margin:0 auto;font-size: 13px;box-sizing: border-box;}
 
 .wrap_profile {
   position: relative;
